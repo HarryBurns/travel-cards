@@ -1,0 +1,30 @@
+{
+  "rules": {
+    "v1": {
+      "lobby": {
+        ".read": true,
+        "$uid": {
+          ".write": true,
+          ".validate": "newData.child('name').isString() && newData.child('name').val().length <= 16"
+        }
+      },
+      "rooms": {
+        ".read": true,
+        "$room": {
+          ".write": true,
+          ".validate": "newData.child('name').isString() && newData.child('name').val().length <= 40"
+        }
+      },
+      "games": {
+        "$room": {
+          ".read": true,
+          ".write": true
+        }
+      }
+    },
+    "test": {
+      ".read": true,
+      ".write": true
+    }
+  }
+}
