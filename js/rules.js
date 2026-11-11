@@ -93,14 +93,32 @@ function drawOne(s, rng) {
   return s.deck.pop();
 }
 
-export function createGame(playerIds, names, rng = Math.random) {
+// Доля колоды, которую помним как «недавно виденную»
+export const SEEN_SHARE = 0.65;
+
+// Колода для новой партии. Карты берутся с конца массива, поэтому наверх кладём те,
+// что давно не попадались, а недавно виденные (seen: от старых к новым) уходят на дно.
+export function buildDeck(seen = [], rng = Math.random) {
+  const all = CARDS.map((c) => c.id);
+  const known = new Set(all);
+  const limit = Math.floor(all.length * SEEN_SHARE);
+  const old = [...new Set(seen.filter((id) => known.has(id)).reverse())].reverse().slice(-limit);
+  const oldSet = new Set(old);
+  const fresh = shuffle(all.filter((id) => !oldSet.has(id)), rng);
+  const half = Math.ceil(old.length / 2);
+  const older = shuffle(old.slice(0, half), rng);
+  const newer = shuffle(old.slice(half), rng);
+  return [...newer, ...older, ...fresh];
+}
+
+export function createGame(playerIds, names, rng = Math.random, seen = []) {
   const order = shuffle(playerIds, rng);
   const s = {
     status: 'playing',
     order,
     names: Object.fromEntries(order.map((id) => [id, names[id] || 'Турист'])),
     hands: {},
-    deck: shuffle(CARDS.map((c) => c.id), rng),
+    deck: buildDeck(seen, rng),
     pile: [],
     dir: 1,
     turn: null,

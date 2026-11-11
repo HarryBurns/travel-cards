@@ -3,7 +3,7 @@ import test from 'node:test';
 import assert from 'node:assert/strict';
 import { CARDS, CARD_BY_ID } from '../js/cards.js';
 import {
-  canPlay, createGame, applyPlay, applyDraw, applyLeave, applyAuto, playable, normalize, topCard, HAND_SIZE,
+  canPlay, createGame, buildDeck, SEEN_SHARE, applyPlay, applyDraw, applyLeave, applyAuto, playable, normalize, topCard, HAND_SIZE,
 } from '../js/rules.js';
 
 function rngFrom(seed) {
@@ -74,6 +74,28 @@ test('раздача: по 4 карты, у первого игрока 3, од�
     for (const id of ids) assert.equal(s.hands[id].length, id === starter ? HAND_SIZE - 1 : HAND_SIZE);
     assert.notEqual(s.turn, starter);
   }
+});
+
+test('колода новой партии: недавно виденные карты уходят на дно', () => {
+  const all = CARDS.map((c) => c.id);
+  const seen = all.slice(0, 40);
+  const deck = buildDeck(seen, rngFrom(11));
+  assert.equal(deck.length, all.length);
+  assert.equal(new Set(deck).size, all.length);
+  const top = deck.slice(-(all.length - 40));
+  assert.ok(top.every((id) => !seen.includes(id)), 'сверху только свежие карты');
+  // из виденных раньше приходят те, что попадались давнее
+  const firstOld = deck.slice(20, 40), lastOld = deck.slice(0, 20);
+  assert.ok(firstOld.every((id) => seen.indexOf(id) < 20));
+  assert.ok(lastOld.every((id) => seen.indexOf(id) >= 20));
+  // память ограничена: даже если видели всё, свежая часть остаётся
+  const full = buildDeck(all.concat(['нет_такой', all[3]]), rngFrom(12));
+  assert.equal(new Set(full).size, all.length);
+  const stale = Math.floor(all.length * SEEN_SHARE);
+  assert.ok(full.slice(0, stale).every((id) => all.indexOf(id) >= all.length - stale || id === all[3]));
+  // раздача идёт из свежих
+  const s = createGame(['a', 'b', 'c'], {}, rngFrom(13), seen);
+  for (const id of [...s.hands.a, ...s.hands.b, ...s.hands.c, ...s.pile]) assert.ok(!seen.includes(id));
 });
 
 test('обычный ход передаёт очередь, чужой ход и неподходящая карта отклоняются', () => {
@@ -209,6 +231,7 @@ test('автоигра: партии любого размера всегда з
       assert.ok(next, 'автоход всегда возможен');
       s = normalize(JSON.parse(JSON.stringify(next)));
       assert.equal(totalCards(s), CARDS.length);
+      assert.equal(new Set([...s.deck, ...s.pile, ...Object.values(s.hands).flat()]).size, CARDS.length, 'ни одна карта не задвоилась');
       for (const id of s.pile) assert.ok(CARD_BY_ID[id]);
       assert.ok(++moves < 5000, 'партия не зациклилась');
     }

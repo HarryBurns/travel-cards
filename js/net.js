@@ -10,6 +10,7 @@ import {
   initializeApp, getDatabase, ref, onValue, set, update, remove, push, runTransaction, onDisconnect, serverTimestamp,
 } from './vendor/firebase.js';
 import { DATABASE_URL } from './config.js';
+import { recall } from './seen.js';
 import {
   normalize, createGame, applyPlay, applyDraw, applyLeave, applyAuto, MIN_PLAYERS, MAX_PLAYERS,
 } from './rules.js';
@@ -148,7 +149,8 @@ export async function startGame(id) {
   const room = res.snapshot.val();
   if (!res.committed || !room) return false;
   const names = Object.fromEntries(Object.entries(room.players).map(([k, p]) => [k, p.name]));
-  const state = createGame(Object.keys(names), names);
+  // Недавно виденные ведущим карты уходят на дно колоды — меньше повторов от партии к партии
+  const state = createGame(Object.keys(names), names, Math.random, recall());
   state.round = room.round; // чтобы клиенты не приняли прошлую партию за новую
   state.at = serverTimestamp();
   state.t0 = serverTimestamp();

@@ -23,8 +23,17 @@
  "d_ice": {
   "file": "File:Basil lemonade (3609257528).jpg"
  },
+ "d_lotus_tea": {
+  "file": "File:Yeonkkot-cha.jpg"
+ },
  "d_orange": {
   "file": "File:Fresh fruit and juice preparation on a sunny kitchen countertop with vibrant colors and healthful options.jpg"
+ },
+ "d_passion": {
+  "file": "File:2020-06-23 19 31 14 A glass of Welch's Passion Fruit Juice in the Franklin Farm section of Oak Hill, Fairfax County, Virginia.jpg"
+ },
+ "d_salt_coffee": {
+  "file": "File:Ly cà phê muối ở Tân Phú ng2th3n2023 (8).jpg"
  },
  "d_salty_lemonade": {
   "file": "File:Chanh muối đặc sản Nha Trang của em Thu Hiền (3).jpg"
@@ -68,17 +77,32 @@
  "f_corn": {
   "file": "File:Roasted corn NP.jpg"
  },
+ "f_crocodile": {
+  "file": "File:Crocodile Steak (36206078094).jpg"
+ },
  "f_dalat_pizza": {
   "file": "File:Banh trang nuong dalat.jpg"
  },
  "f_durian": {
   "file": "File:Durian Fruit in Yunnan.jpg"
  },
+ "f_hotpot": {
+  "file": "File:Lẩu cù lao.jpg"
+ },
  "f_ice_cream": {
   "file": "File:I scream You scream.jpg"
  },
+ "f_jellyfish": {
+  "file": "File:Jellyfish and roast duck salad.JPG"
+ },
+ "f_korean_bbq": {
+  "file": "File:Korean barbecue-Grill and banchan.jpg"
+ },
  "f_mango": {
   "file": "File:'Dasheri' mango (sliced).jpg"
+ },
+ "f_nem_nuong": {
+  "file": "File:Mẹt nem nướng Nha Trang.jpg"
  },
  "f_noodles": {
   "file": "File:Nissin Cup Noodle (Original) - 01.jpg"
@@ -106,6 +130,9 @@
  },
  "j_amusement": {
   "file": "File:July 2023 Suoi Tien Park 25.jpg"
+ },
+ "j_babka": {
+  "file": "File:DZ6 1730 Night market street food stall displaying skewers sausages and packaged ingredients ready to grill as customers browse in the background.jpg"
  },
  "j_cafe": {
   "file": "File:Cafe Lối Xưa, đường Gò Dầu, Tân Phú, tháng 9 năm 2018 (12).jpg"
@@ -154,6 +181,9 @@
  },
  "j_supermarket": {
   "file": "File:Sieu thi Co opmart, Cong Quynh, Pham ngu lao, hcmvn - panoramio.jpg"
+ },
+ "s_ba_ho": {
+  "file": "File:SuoiBabe.jpg"
  },
  "s_ba_na": {
   "file": "File:Cable Car at Sun World Ba Na Hills in the sunset.jpg"
@@ -221,6 +251,9 @@
  "s_marble_mountains": {
   "file": "File:Marble Mountain Hoi An, Da Nang (71468).jpg"
  },
+ "s_monkey_island": {
+  "file": "File:MONKEY ISLAND NHA TRANG BAY VIETNAM JAN2012 (6967923315).jpg"
+ },
  "s_mud": {
   "file": "File:Mud Bath (24120323915).jpg"
  },
@@ -229,6 +262,12 @@
  },
  "s_my_khe": {
   "file": "File:My Khe Beach Danang Coastline.jpg"
+ },
+ "s_oceanography": {
+  "file": "File:Hải dương học Nha Trang.jpg"
+ },
+ "s_orchid_island": {
+  "file": "File:Orchid House - Saigon Zoo and Botanical Gardens - Ho Chi Minh City, Vietnam - DSC01269.JPG"
  },
  "s_po_nagar": {
   "file": "File:Po Nagar Nha Trang Vietnam.JPG"
@@ -248,11 +287,20 @@
  "s_vinpearl": {
   "file": "File:Vinpearl Nha Trang cable car - panoramio (173).jpg"
  },
+ "s_vinpearl_aquapark": {
+  "file": "File:Vinpearl waterpark.jpg"
+ },
+ "s_vinwonders": {
+  "file": "File:Vinpearl Land (49356972042).jpg"
+ },
  "s_xuan_huong": {
   "file": "File:Xuan Huong Lake 09.jpg"
  },
  "t_airport": {
   "file": "File:Restroom gender icons (42050722141).jpg"
+ },
+ "t_aquapark": {
+  "file": "File:HK CWB 維多利亞公園游泳池 old Victoria Park Swimming Pool 男更衣室 Changing Room interior corridor Sept-2013 (1).JPG"
  },
  "t_auto": {
   "file": "File:Sanisette devant l'entrée du cimetière, avenue du Cimetière (Toulouse).jpg"
@@ -264,13 +312,17 @@
   "file": "File:Bidet shower greek style.jpg"
  },
  "t_boat": {
-  "file": "File:Inspection of new toilet via boat (7414532588).jpg"
+  "file": "File:Diana toilet.jpg",
+  "fit": "pad"
  },
  "t_bus": {
   "file": "File:Victory Liner 575 (THACO Bluesky Volvo B8R; interior daytime) 2026-01-04.jpg"
  },
  "t_bushes": {
   "file": "File:The rains on the previous night had made the jungle paths wet and slushy (49695780048).jpg"
+ },
+ "t_cable": {
+  "file": "File:Wellington Cable Car upper station 12.jpg"
  },
  "t_camping": {
   "file": "File:Campsite with toilet by Kleinafallet.jpg"
@@ -293,8 +345,14 @@
  "t_japan": {
   "file": "File:Controls of a typical toilet in Japan. (35400585742).jpg"
  },
+ "t_mall": {
+  "file": "File:Moscow, Aviapark mall, entrance to public toilets (1).jpg"
+ },
  "t_market": {
   "file": "File:Yudun market old toilet.jpg"
+ },
+ "t_monkey": {
+  "file": "File:Large monkey on a rock Vietnam.jpg"
  },
  "t_mountain": {
   "file": "File:Miyamasanso02.JPG"
@@ -325,6 +383,12 @@
  },
  "t_queue": {
   "file": "File:Queues of Male Toilets after Morning Programs of 2015 Hsinchu AFB Open Day 20151121.jpg"
+ },
+ "t_restaurant": {
+  "file": "File:Fancy Restroom.JPG"
+ },
+ "t_room": {
+  "file": "File:Bathroom of Khan Pool Suite in Amantaka luxury Resort & Hotel in Luang Prabang Laos.jpg"
  },
  "t_squat": {
   "file": "File:Squat toilet ILO Geneva.jpg"

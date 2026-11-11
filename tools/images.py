@@ -14,6 +14,7 @@
 Выбор хранится в tools/image-picks.json:
   { "<id>": {"file": "File:Name.jpg", "gx": 0.5, "gy": 0.5} }   (gx/gy – центр обрезки)
 Вместо "file" можно указать "n" – номер кандидата с листа peek.
+"fit": "pad" – не обрезать вертикальный кадр, а показать целиком на размытом фоне.
 Если карты там нет, берётся первый кандидат поиска.
 
 Wikimedia строго ограничивает частоту запросов анонимных скриптов, поэтому между
@@ -21,7 +22,7 @@ Wikimedia строго ограничивает частоту запросов 
 Рабочая папка – переменная WORK (по умолчанию ./.imgwork, в git не попадает).
 """
 import html, json, os, re, subprocess, sys, time, urllib.parse
-from PIL import Image, ImageDraw, ImageOps
+from PIL import Image, ImageDraw, ImageEnhance, ImageFilter, ImageOps
 
 ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 WORK = os.environ.get('WORK', os.path.join(ROOT, '.imgwork'))
@@ -332,7 +333,15 @@ def cmd_final(ids):
             continue
         p = picks.get(cid, {})
         im = Image.open(orig_path(cid)).convert('RGB')
-        im = ImageOps.fit(im, (OUT_W, OUT_H), Image.LANCZOS, centering=(p.get('gx', 0.5), p.get('gy', 0.5)))
+        if p.get('fit') == 'pad':
+            # вертикальный кадр целиком: по бокам — размытая копия самого снимка
+            back = ImageOps.fit(im, (OUT_W, OUT_H), Image.LANCZOS).filter(ImageFilter.GaussianBlur(18))
+            back = ImageEnhance.Brightness(back).enhance(0.75)
+            front = ImageOps.contain(im, (OUT_W, OUT_H), Image.LANCZOS)
+            back.paste(front, ((OUT_W - front.width) // 2, (OUT_H - front.height) // 2))
+            im = back
+        else:
+            im = ImageOps.fit(im, (OUT_W, OUT_H), Image.LANCZOS, centering=(p.get('gx', 0.5), p.get('gy', 0.5)))
         im.save(os.path.join(outdir, cid + '.webp'), 'WEBP', quality=80, method=6)
         picks[cid] = {k: v for k, v in dict(p, file=c['title']).items() if k != 'n'}
         credits[cid] = {

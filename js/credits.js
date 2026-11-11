@@ -49,11 +49,29 @@ export const CREDITS = {
   "lu": "https://creativecommons.org/licenses/by-sa/2.0",
   "p": "https://commons.wikimedia.org/wiki/File:Basil_lemonade_(3609257528).jpg"
  },
+ "d_lotus_tea": {
+  "a": "늘피네",
+  "l": "CC BY 2.0 kr",
+  "lu": "https://creativecommons.org/licenses/by/2.0/kr/deed.en",
+  "p": "https://commons.wikimedia.org/wiki/File:Yeonkkot-cha.jpg"
+ },
  "d_orange": {
   "a": "Shixart1985",
   "l": "CC BY 2.0",
   "lu": "https://creativecommons.org/licenses/by/2.0",
   "p": "https://commons.wikimedia.org/wiki/File:Fresh_fruit_and_juice_preparation_on_a_sunny_kitchen_countertop_with_vibrant_colors_and_healthful_options.jpg"
+ },
+ "d_passion": {
+  "a": "Famartin",
+  "l": "CC BY-SA 4.0",
+  "lu": "https://creativecommons.org/licenses/by-sa/4.0",
+  "p": "https://commons.wikimedia.org/wiki/File:2020-06-23_19_31_14_A_glass_of_Welch%27s_Passion_Fruit_Juice_in_the_Franklin_Farm_section_of_Oak_Hill,_Fairfax_County,_Virginia.jpg"
+ },
+ "d_salt_coffee": {
+  "a": "Phương Huy",
+  "l": "CC BY-SA 4.0",
+  "lu": "https://creativecommons.org/licenses/by-sa/4.0",
+  "p": "https://commons.wikimedia.org/wiki/File:Ly_c%C3%A0_ph%C3%AA_mu%E1%BB%91i_%E1%BB%9F_T%C3%A2n_Ph%C3%BA_ng2th3n2023_(8).jpg"
  },
  "d_salty_lemonade": {
   "a": "Phương Huy (thảo luận)",
@@ -139,6 +157,12 @@ export const CREDITS = {
   "lu": "https://creativecommons.org/licenses/by-sa/3.0",
   "p": "https://commons.wikimedia.org/wiki/File:Roasted_corn_NP.jpg"
  },
+ "f_crocodile": {
+  "a": "Mihnea Stanciu from Toronto, Canada",
+  "l": "CC BY 2.0",
+  "lu": "https://creativecommons.org/licenses/by/2.0",
+  "p": "https://commons.wikimedia.org/wiki/File:Crocodile_Steak_(36206078094).jpg"
+ },
  "f_dalat_pizza": {
   "a": "Blueconcorde",
   "l": "CC0",
@@ -151,17 +175,41 @@ export const CREDITS = {
   "lu": "https://creativecommons.org/licenses/by-sa/2.0",
   "p": "https://commons.wikimedia.org/wiki/File:Durian_Fruit_in_Yunnan.jpg"
  },
+ "f_hotpot": {
+  "a": "Baoothersks",
+  "l": "CC BY-SA 4.0",
+  "lu": "https://creativecommons.org/licenses/by-sa/4.0",
+  "p": "https://commons.wikimedia.org/wiki/File:L%E1%BA%A9u_c%C3%B9_lao.jpg"
+ },
  "f_ice_cream": {
   "a": "Cherry Darlin'",
   "l": "CC BY-SA 2.0",
   "lu": "https://creativecommons.org/licenses/by-sa/2.0",
   "p": "https://commons.wikimedia.org/wiki/File:I_scream_You_scream.jpg"
  },
+ "f_jellyfish": {
+  "a": "Takeaway",
+  "l": "CC BY-SA 3.0",
+  "lu": "https://creativecommons.org/licenses/by-sa/3.0",
+  "p": "https://commons.wikimedia.org/wiki/File:Jellyfish_and_roast_duck_salad.JPG"
+ },
+ "f_korean_bbq": {
+  "a": "suksim",
+  "l": "CC BY 2.0",
+  "lu": "https://creativecommons.org/licenses/by/2.0",
+  "p": "https://commons.wikimedia.org/wiki/File:Korean_barbecue-Grill_and_banchan.jpg"
+ },
  "f_mango": {
   "a": "Salil Kumar Mukherjee",
   "l": "CC BY-SA 4.0",
   "lu": "https://creativecommons.org/licenses/by-sa/4.0",
   "p": "https://commons.wikimedia.org/wiki/File:%27Dasheri%27_mango_(sliced).jpg"
+ },
+ "f_nem_nuong": {
+  "a": "Letruongan1122",
+  "l": "CC BY-SA 4.0",
+  "lu": "https://creativecommons.org/licenses/by-sa/4.0",
+  "p": "https://commons.wikimedia.org/wiki/File:M%E1%BA%B9t_nem_n%C6%B0%E1%BB%9Bng_Nha_Trang.jpg"
  },
  "f_noodles": {
   "a": "Quercus acuta",
@@ -216,6 +264,12 @@ export const CREDITS = {
   "l": "CC0",
   "lu": "http://creativecommons.org/publicdomain/zero/1.0/deed.en",
   "p": "https://commons.wikimedia.org/wiki/File:July_2023_Suoi_Tien_Park_25.jpg"
+ },
+ "j_babka": {
+  "a": "PattayaPatrol",
+  "l": "CC BY-SA 4.0",
+  "lu": "https://creativecommons.org/licenses/by-sa/4.0",
+  "p": "https://commons.wikimedia.org/wiki/File:DZ6_1730_Night_market_street_food_stall_displaying_skewers_sausages_and_packaged_ingredients_ready_to_grill_as_customers_browse_in_the_background.jpg"
  },
  "j_cafe": {
   "a": "Phương Huy (thảo luận)",
@@ -312,6 +366,12 @@ export const CREDITS = {
   "l": "CC BY 3.0",
   "lu": "https://creativecommons.org/licenses/by/3.0",
   "p": "https://commons.wikimedia.org/wiki/File:Sieu_thi_Co_opmart,_Cong_Quynh,_Pham_ngu_lao,_hcmvn_-_panoramio.jpg"
+ },
+ "s_ba_ho": {
+  "a": "phgaillard2001",
+  "l": "CC BY-SA 2.0",
+  "lu": "https://creativecommons.org/licenses/by-sa/2.0",
+  "p": "https://commons.wikimedia.org/wiki/File:SuoiBabe.jpg"
  },
  "s_ba_na": {
   "a": "Vivu Vietnam",
@@ -445,6 +505,12 @@ export const CREDITS = {
   "lu": "https://creativecommons.org/licenses/by/4.0",
   "p": "https://commons.wikimedia.org/wiki/File:Marble_Mountain_Hoi_An,_Da_Nang_(71468).jpg"
  },
+ "s_monkey_island": {
+  "a": "calflier001",
+  "l": "CC BY-SA 2.0",
+  "lu": "https://creativecommons.org/licenses/by-sa/2.0",
+  "p": "https://commons.wikimedia.org/wiki/File:MONKEY_ISLAND_NHA_TRANG_BAY_VIETNAM_JAN2012_(6967923315).jpg"
+ },
  "s_mud": {
   "a": "Prayitno / Thank you for (12 millions +) view from Los Angeles, USA",
   "l": "CC BY 2.0",
@@ -462,6 +528,18 @@ export const CREDITS = {
   "l": "CC BY-SA 4.0",
   "lu": "https://creativecommons.org/licenses/by-sa/4.0",
   "p": "https://commons.wikimedia.org/wiki/File:My_Khe_Beach_Danang_Coastline.jpg"
+ },
+ "s_oceanography": {
+  "a": "Bùi Thụy Đào Nguyên",
+  "l": "Public domain",
+  "lu": "",
+  "p": "https://commons.wikimedia.org/wiki/File:H%E1%BA%A3i_d%C6%B0%C6%A1ng_h%E1%BB%8Dc_Nha_Trang.jpg"
+ },
+ "s_orchid_island": {
+  "a": "Daderot",
+  "l": "CC0",
+  "lu": "http://creativecommons.org/publicdomain/zero/1.0/deed.en",
+  "p": "https://commons.wikimedia.org/wiki/File:Orchid_House_-_Saigon_Zoo_and_Botanical_Gardens_-_Ho_Chi_Minh_City,_Vietnam_-_DSC01269.JPG"
  },
  "s_po_nagar": {
   "a": "Tervlugt",
@@ -499,6 +577,18 @@ export const CREDITS = {
   "lu": "https://creativecommons.org/licenses/by/3.0",
   "p": "https://commons.wikimedia.org/wiki/File:Vinpearl_Nha_Trang_cable_car_-_panoramio_(173).jpg"
  },
+ "s_vinpearl_aquapark": {
+  "a": "Muzzamo",
+  "l": "Public domain",
+  "lu": "",
+  "p": "https://commons.wikimedia.org/wiki/File:Vinpearl_waterpark.jpg"
+ },
+ "s_vinwonders": {
+  "a": "Martin Lewison from Forest Hills, NY, U.S.A.",
+  "l": "CC BY 2.0",
+  "lu": "https://creativecommons.org/licenses/by/2.0",
+  "p": "https://commons.wikimedia.org/wiki/File:Vinpearl_Land_(49356972042).jpg"
+ },
  "s_xuan_huong": {
   "a": "Diane Selwyn (talk)",
   "l": "Public domain",
@@ -510,6 +600,12 @@ export const CREDITS = {
   "l": "CC BY 2.0",
   "lu": "https://creativecommons.org/licenses/by/2.0",
   "p": "https://commons.wikimedia.org/wiki/File:Restroom_gender_icons_(42050722141).jpg"
+ },
+ "t_aquapark": {
+  "a": "Malesworldoa",
+  "l": "CC BY-SA 3.0",
+  "lu": "https://creativecommons.org/licenses/by-sa/3.0",
+  "p": "https://commons.wikimedia.org/wiki/File:HK_CWB_%E7%B6%AD%E5%A4%9A%E5%88%A9%E4%BA%9E%E5%85%AC%E5%9C%92%E6%B8%B8%E6%B3%B3%E6%B1%A0_old_Victoria_Park_Swimming_Pool_%E7%94%B7%E6%9B%B4%E8%A1%A3%E5%AE%A4_Changing_Room_interior_corridor_Sept-2013_(1).JPG"
  },
  "t_auto": {
   "a": "Abdoucondorcet",
@@ -530,10 +626,10 @@ export const CREDITS = {
   "p": "https://commons.wikimedia.org/wiki/File:Bidet_shower_greek_style.jpg"
  },
  "t_boat": {
-  "a": "SuSanA Secretariat",
-  "l": "CC BY 2.0",
-  "lu": "https://creativecommons.org/licenses/by/2.0",
-  "p": "https://commons.wikimedia.org/wiki/File:Inspection_of_new_toilet_via_boat_(7414532588).jpg"
+  "a": "Nord68",
+  "l": "CC BY-SA 4.0",
+  "lu": "https://creativecommons.org/licenses/by-sa/4.0",
+  "p": "https://commons.wikimedia.org/wiki/File:Diana_toilet.jpg"
  },
  "t_bus": {
   "a": "LMP 2001",
@@ -546,6 +642,12 @@ export const CREDITS = {
   "l": "CC BY 2.0",
   "lu": "https://creativecommons.org/licenses/by/2.0",
   "p": "https://commons.wikimedia.org/wiki/File:The_rains_on_the_previous_night_had_made_the_jungle_paths_wet_and_slushy_(49695780048).jpg"
+ },
+ "t_cable": {
+  "a": "Panamitsu",
+  "l": "CC BY-SA 4.0",
+  "lu": "https://creativecommons.org/licenses/by-sa/4.0",
+  "p": "https://commons.wikimedia.org/wiki/File:Wellington_Cable_Car_upper_station_12.jpg"
  },
  "t_camping": {
   "a": "Gustav Lindqvist",
@@ -589,11 +691,23 @@ export const CREDITS = {
   "lu": "https://creativecommons.org/licenses/by-sa/2.0",
   "p": "https://commons.wikimedia.org/wiki/File:Controls_of_a_typical_toilet_in_Japan._(35400585742).jpg"
  },
+ "t_mall": {
+  "a": "Gennady Grachev from Moscow, Russia",
+  "l": "CC BY 2.0",
+  "lu": "https://creativecommons.org/licenses/by/2.0",
+  "p": "https://commons.wikimedia.org/wiki/File:Moscow,_Aviapark_mall,_entrance_to_public_toilets_(1).jpg"
+ },
  "t_market": {
   "a": "사랑",
   "l": "Public domain",
   "lu": "",
   "p": "https://commons.wikimedia.org/wiki/File:Yudun_market_old_toilet.jpg"
+ },
+ "t_monkey": {
+  "a": "Peter van der Sluijs",
+  "l": "CC BY-SA 3.0",
+  "lu": "https://creativecommons.org/licenses/by-sa/3.0",
+  "p": "https://commons.wikimedia.org/wiki/File:Large_monkey_on_a_rock_Vietnam.jpg"
  },
  "t_mountain": {
   "a": "Σ64",
@@ -654,6 +768,18 @@ export const CREDITS = {
   "l": "CC0",
   "lu": "http://creativecommons.org/publicdomain/zero/1.0/deed.en",
   "p": "https://commons.wikimedia.org/wiki/File:Queues_of_Male_Toilets_after_Morning_Programs_of_2015_Hsinchu_AFB_Open_Day_20151121.jpg"
+ },
+ "t_restaurant": {
+  "a": "Sarojini Seupersad",
+  "l": "CC BY-SA 4.0",
+  "lu": "https://creativecommons.org/licenses/by-sa/4.0",
+  "p": "https://commons.wikimedia.org/wiki/File:Fancy_Restroom.JPG"
+ },
+ "t_room": {
+  "a": "Basile Morin",
+  "l": "CC BY-SA 4.0",
+  "lu": "https://creativecommons.org/licenses/by-sa/4.0",
+  "p": "https://commons.wikimedia.org/wiki/File:Bathroom_of_Khan_Pool_Suite_in_Amantaka_luxury_Resort_%26_Hotel_in_Luang_Prabang_Laos.jpg"
  },
  "t_squat": {
   "a": "BiiJii",

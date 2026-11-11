@@ -4,6 +4,7 @@ import * as net from './net.js';
 import { CARD_BY_ID, TYPES, PHRASES } from './cards.js';
 import { NEXT, canPlay, topCard } from './rules.js';
 import { RECONNECT_GRACE_MS, AUTO_MOVE_DELAY_MS } from './config.js';
+import { remember } from './seen.js';
 import { Card, CardBack, Modal, Rules, avatar, cardsWord, cardsLeft } from './ui.js';
 
 const TYPE_ORDER = { sight: 0, food: 1, drink: 2, toilet: 3, joker: 4 };
@@ -166,6 +167,12 @@ export function GameScreen({ roomId, room, game, connected, onExit, toast }) {
   useEffect(() => {
     if (!myTurn) { setSelected(null); setSwapCard(null); }
   }, [myTurn]);
+
+  // Запоминаем виденные карты: сброс и свою руку, а в конце партии — и чужие руки
+  useEffect(() => {
+    const others = s.status === 'finished' ? Object.values(s.hands).flat() : [];
+    remember([...others, ...(s.hands[uid] || []), ...s.pile]);
+  }, [s.seq]);
 
   // Подсветка только что пришедших карт
   useEffect(() => {
