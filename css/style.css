@@ -150,6 +150,13 @@ button:disabled { cursor: default; }
 .cycle { display: flex; flex-direction: column; gap: 8px; font-size: 14px; }
 .cycle i { font-style: normal; font-weight: 900; margin: 0 2px; }
 .fx-list { display: flex; flex-direction: column; gap: 6px; font-size: 14px; }
+.modal.deck-modal { width: min(900px, 100%); max-height: 92dvh; }
+.tabs { display: flex; flex-wrap: wrap; gap: 6px; }
+.tab { border: 2px solid var(--tc); background: #fff; color: var(--tc2); border-radius: 99px; padding: 6px 12px; font-size: 13px; font-weight: 700; }
+.tab small { opacity: .7; font-weight: 500; }
+.tab.on { background: var(--tc); color: #fff; }
+.gallery { display: grid; grid-template-columns: repeat(auto-fill, minmax(150px, 1fr)); gap: 12px; }
+.gallery .card { width: 100%; }
 .credits ul { font-size: 13px; display: flex; flex-direction: column; gap: 5px; }
 .credits a { color: #0a6c9b; }
 .targets { display: flex; flex-direction: column; gap: 8px; }
@@ -177,7 +184,7 @@ button:disabled { cursor: default; }
   position: absolute; width: 15cqw; height: 15cqw; border-radius: 50%; display: grid; place-items: center;
   font-size: 8cqw; line-height: 1; background: #fff; box-shadow: 0 0 0 1.4cqw var(--tc); z-index: 1;
 }
-.card-badge { right: 4cqw; bottom: -7.5cqw; }
+.card-badge { right: 4cqw; bottom: 4cqw; }
 .card-corner { display: none; }
 .card-body { flex: 1; min-height: 0; padding: 4cqw 5.5cqw 4.5cqw; display: flex; flex-direction: column; gap: 1.6cqw; }
 .card-type { font-size: 4.5cqw; font-weight: 700; color: var(--tc2); text-transform: uppercase; letter-spacing: .05em; white-space: nowrap; }

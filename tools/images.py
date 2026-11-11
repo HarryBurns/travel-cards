@@ -3,6 +3,8 @@
 
   python3 tools/images.py search [id ...]  – найти кандидатов по запросам из image-queries.json
   python3 tools/images.py list   [id ...]  – показать названия кандидатов
+  python3 tools/images.py peek   [id ...]  – скачать миниатюры всех кандидатов и собрать листы
+                                             для сравнения (номер на миниатюре = номер кандидата)
   python3 tools/images.py fetch  [id ...]  – скачать выбранную картинку каждой карты
   python3 tools/images.py sheet  [id ...]  – контактные листы для просмотра глазами
   python3 tools/images.py final  [id ...]  – обрезать до 4:3, сохранить img/cards/*.webp,
@@ -10,6 +12,7 @@
 
 Выбор хранится в tools/image-picks.json:
   { "<id>": {"file": "File:Name.jpg", "gx": 0.5, "gy": 0.5} }   (gx/gy – центр обрезки)
+Вместо "file" можно указать "n" – номер кандидата с листа peek.
 Если карты там нет, берётся первый кандидат поиска.
 
 Wikimedia строго ограничивает частоту запросов анонимных скриптов, поэтому между
@@ -155,9 +158,12 @@ def cands_of(cid):
 def chosen(cid, picks):
     """Метаданные выбранной картинки карты (из выбора или первый кандидат)."""
     meta = cands_of(cid)
-    want = picks.get(cid, {}).get('file')
+    pick = picks.get(cid, {})
+    want = pick.get('file')
     if not want:
-        return meta['cands'][0] if meta['cands'] else None
+        # "n" – номер кандидата с листа peek; final заменит его на название файла
+        n = pick.get('n', 0)
+        return meta['cands'][n] if len(meta['cands']) > n else None
     for c in meta['cands']:
         if c['title'] == want:
             return c
@@ -189,6 +195,49 @@ def cmd_list(ids):
         print(f'\n{cid}  [{meta["query"]}]')
         for i, c in enumerate(meta['cands']):
             print(f'  {i}: {c["title"]}  {c["width"]}x{c["height"]}  {c["license"]}  — {c["desc"][:70]}')
+
+
+def cmd_peek(ids):
+    per_card, tw, th, lab, rows = 6, 220, 165, 120, 7
+    ids = [i for i in (ids or all_ids()) if cands_of(i)['cands']]
+    seen_path = os.path.join(CANDS, '_peek.json')
+    seen = load_json(seen_path, {})
+    for cid in ids:
+        for i, c in enumerate(cands_of(cid)['cands'][:per_card]):
+            dst = os.path.join(CANDS, f'{cid}_{i}.jpg')
+            if seen.get(f'{cid}_{i}') == c['title'] and os.path.exists(dst):
+                continue
+            try:
+                curl(thumb_url(c, 330), out=dst)
+                seen[f'{cid}_{i}'] = c['title']
+            except Exception as e:  # noqa
+                print('ERR', cid, i, e, flush=True)
+        save_json(seen_path, seen)
+    sheets = os.path.join(WORK, 'sheets')
+    os.makedirs(sheets, exist_ok=True)
+    for s in range(0, len(ids), rows):
+        chunk = ids[s:s + rows]
+        img = Image.new('RGB', (lab + per_card * (tw + 4), len(chunk) * (th + 4)), 'white')
+        d = ImageDraw.Draw(img)
+        for r, cid in enumerate(chunk):
+            y = r * (th + 4)
+            for k, line in enumerate(re.findall(r'.{1,18}', cid)):
+                d.text((4, y + 4 + 13 * k), line, fill='black')
+            for i in range(per_card):
+                p = os.path.join(CANDS, f'{cid}_{i}.jpg')
+                if seen.get(f'{cid}_{i}') is None or not os.path.exists(p):
+                    continue
+                try:
+                    t = ImageOps.fit(Image.open(p).convert('RGB'), (tw, th), Image.LANCZOS)
+                except Exception:  # noqa
+                    continue
+                x = lab + i * (tw + 4)
+                img.paste(t, (x, y))
+                d.rectangle((x, y, x + 16, y + 15), fill='black')
+                d.text((x + 5, y + 2), str(i), fill='yellow')
+        out = os.path.join(sheets, f'peek_{chunk[0]}.jpg')
+        img.save(out, quality=78)
+        print(out, flush=True)
 
 
 def orig_path(cid):
@@ -263,7 +312,7 @@ def cmd_final(ids):
         im = Image.open(orig_path(cid)).convert('RGB')
         im = ImageOps.fit(im, (OUT_W, OUT_H), Image.LANCZOS, centering=(p.get('gx', 0.5), p.get('gy', 0.5)))
         im.save(os.path.join(outdir, cid + '.webp'), 'WEBP', quality=80, method=6)
-        picks[cid] = dict(p, file=c['title'])
+        picks[cid] = {k: v for k, v in dict(p, file=c['title']).items() if k != 'n'}
         credits[cid] = {
             'file': c['title'], 'page': c['page'],
             'author': c['artist'] or c['credit'] or 'Wikimedia Commons',
@@ -280,7 +329,7 @@ def cmd_final(ids):
 
 
 if __name__ == '__main__':
-    cmds = {'search': cmd_search, 'list': cmd_list, 'fetch': cmd_fetch, 'sheet': cmd_sheet, 'final': cmd_final}
+    cmds = {'search': cmd_search, 'list': cmd_list, 'peek': cmd_peek, 'fetch': cmd_fetch, 'sheet': cmd_sheet, 'final': cmd_final}
     cmd = sys.argv[1] if len(sys.argv) > 1 else ''
     if cmd in cmds:
         cmds[cmd](sys.argv[2:])

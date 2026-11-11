@@ -4,7 +4,7 @@ import * as net from './net.js';
 import { MIN_PLAYERS, MAX_PLAYERS } from './rules.js';
 import { CARDS } from './cards.js';
 import { GameScreen } from './game.js';
-import { Rules, Credits, avatar, plural } from './ui.js';
+import { Rules, Credits, Deck, avatar, plural } from './ui.js';
 
 const TITLE = 'Ну долго ещё?';
 const TAGLINE = 'Карточная игра про неопытных туристов';
@@ -154,6 +154,7 @@ function App() {
     ${screen}
     ${dialog === 'rules' && html`<${Rules} onClose=${() => setDialog(null)} />`}
     ${dialog === 'credits' && html`<${Credits} onClose=${() => setDialog(null)} />`}
+    ${dialog === 'deck' && html`<${Deck} onClose=${() => setDialog(null)} />`}
     <div class="toasts">${toasts.map((t) => html`<div class="toast" key=${t.id}>${t.text}</div>`)}</div>`;
 }
 
@@ -174,6 +175,8 @@ function Footer({ onDialog }) {
   return html`
     <footer class="foot">
       <button class="link" onClick=${() => onDialog('rules')}>Правила</button>
+      <span>·</span>
+      <button class="link" onClick=${() => onDialog('deck')}>Все карты</button>
       <span>·</span>
       <button class="link" onClick=${() => onDialog('credits')}>Авторы фото</button>
     </footer>`;

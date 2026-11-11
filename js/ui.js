@@ -1,6 +1,6 @@
 // Общие кирпичики интерфейса
-import { html, useEffect } from './vendor/preact.js';
-import { CARD_BY_ID, TYPES, FX } from './cards.js';
+import { html, useEffect, useState } from './vendor/preact.js';
+import { CARDS, CARD_BY_ID, TYPES, FX } from './cards.js';
 import { CREDITS } from './credits.js';
 
 const AVATARS = ['🧳', '🎒', '🕶️', '🩴', '📷', '🗺️', '🌴', '🥥', '🛵', '🏝️', '🧢', '🩳', '⛱️', '🧭', '🚌', '🎫'];
@@ -92,6 +92,23 @@ export function Rules({ onClose }) {
       </ul>
       <p class="muted">Вдвоём «Разворот» работает как пропуск хода соперника.
          Если игрок отвалился, его ждут минуту, а потом ходят за него автоматически.</p>
+    <//>`;
+}
+
+export function Deck({ onClose }) {
+  const [type, setType] = useState('sight');
+  const count = (t) => CARDS.filter((c) => c.type === t).length;
+  return html`
+    <${Modal} title="Все карты · ${CARDS.length}" onClose=${onClose} class="deck-modal">
+      <div class="tabs">
+        ${Object.keys(TYPES).map((t) => html`
+          <button key=${t} class="tab t-${t} ${t === type ? 'on' : ''}" onClick=${() => setType(t)}>
+            ${TYPES[t].icon} ${TYPES[t].label} <small>${count(t)}</small>
+          </button>`)}
+      </div>
+      <div class="gallery">
+        ${CARDS.filter((c) => c.type === type).map((c) => html`<${Card} key=${c.id} id=${c.id} />`)}
+      </div>
     <//>`;
 }
 

@@ -1,0 +1,562 @@
+{
+ "d_artichoke": {
+  "author": "Keagiles",
+  "file": "File:Artichoke ready to cook.jpg",
+  "license": "CC BY-SA 3.0",
+  "licenseUrl": "https://creativecommons.org/licenses/by-sa/3.0",
+  "page": "https://commons.wikimedia.org/wiki/File:Artichoke_ready_to_cook.jpg"
+ },
+ "d_avocado": {
+  "author": "Annapowell",
+  "file": "File:Green Smoothie.jpg",
+  "license": "CC BY-SA 4.0",
+  "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+  "page": "https://commons.wikimedia.org/wiki/File:Green_Smoothie.jpg"
+ },
+ "d_bubble_tea": {
+  "author": "Missvain",
+  "file": "File:Thai Iced Bubble Tea - Sonoma Pho - Stierch - 2019.jpg",
+  "license": "CC BY 4.0",
+  "licenseUrl": "https://creativecommons.org/licenses/by/4.0",
+  "page": "https://commons.wikimedia.org/wiki/File:Thai_Iced_Bubble_Tea_-_Sonoma_Pho_-_Stierch_-_2019.jpg"
+ },
+ "d_ca_phe_sua_da": {
+  "author": "Clarin",
+  "file": "File:Ca Phe Sua Da.jpg",
+  "license": "CC BY 2.5",
+  "licenseUrl": "https://creativecommons.org/licenses/by/2.5",
+  "page": "https://commons.wikimedia.org/wiki/File:Ca_Phe_Sua_Da.jpg"
+ },
+ "d_coconut": {
+  "author": "Crisco 1492",
+  "file": "File:Coconut Drink, Pangandaran.JPG",
+  "license": "CC BY-SA 3.0",
+  "licenseUrl": "https://creativecommons.org/licenses/by-sa/3.0",
+  "page": "https://commons.wikimedia.org/wiki/File:Coconut_Drink,_Pangandaran.JPG"
+ },
+ "d_egg_coffee": {
+  "author": "David McKelvey from Brisbane, Australia",
+  "file": "File:Egg Coffee (6923068614).jpg",
+  "license": "CC BY 2.0",
+  "licenseUrl": "https://creativecommons.org/licenses/by/2.0",
+  "page": "https://commons.wikimedia.org/wiki/File:Egg_Coffee_(6923068614).jpg"
+ },
+ "d_ice": {
+  "author": "dana robinson from los angeles, ca, usa",
+  "file": "File:Basil lemonade (3609257528).jpg",
+  "license": "CC BY-SA 2.0",
+  "licenseUrl": "https://creativecommons.org/licenses/by-sa/2.0",
+  "page": "https://commons.wikimedia.org/wiki/File:Basil_lemonade_(3609257528).jpg"
+ },
+ "d_orange": {
+  "author": "Shixart1985",
+  "file": "File:Fresh fruit and juice preparation on a sunny kitchen countertop with vibrant colors and healthful options.jpg",
+  "license": "CC BY 2.0",
+  "licenseUrl": "https://creativecommons.org/licenses/by/2.0",
+  "page": "https://commons.wikimedia.org/wiki/File:Fresh_fruit_and_juice_preparation_on_a_sunny_kitchen_countertop_with_vibrant_colors_and_healthful_options.jpg"
+ },
+ "d_salty_lemonade": {
+  "author": "Phương Huy (thảo luận)",
+  "file": "File:Chanh muối đặc sản Nha Trang của em Thu Hiền (3).jpg",
+  "license": "Public domain",
+  "licenseUrl": "",
+  "page": "https://commons.wikimedia.org/wiki/File:Chanh_mu%E1%BB%91i_%C4%91%E1%BA%B7c_s%E1%BA%A3n_Nha_Trang_c%E1%BB%A7a_em_Thu_Hi%E1%BB%81n_(3).jpg"
+ },
+ "d_smoothie": {
+  "author": "Vivekpat30",
+  "file": "File:Fresh-mango-smoothie 01.jpg",
+  "license": "CC BY-SA 4.0",
+  "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+  "page": "https://commons.wikimedia.org/wiki/File:Fresh-mango-smoothie_01.jpg"
+ },
+ "d_soy_milk": {
+  "author": "Mr.ちゅらさん",
+  "file": "File:Hot Coffee meets Soy Milk(1).jpg",
+  "license": "CC BY-SA 4.0",
+  "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+  "page": "https://commons.wikimedia.org/wiki/File:Hot_Coffee_meets_Soy_Milk(1).jpg"
+ },
+ "d_sugarcane": {
+  "author": "Adam Jones from Kelowna, BC, Canada",
+  "file": "File:Manh Squeezing Sugar Cane Juice - Dien Bien Phu - Vietnam (48159230787).jpg",
+  "license": "CC BY-SA 2.0",
+  "licenseUrl": "https://creativecommons.org/licenses/by-sa/2.0",
+  "page": "https://commons.wikimedia.org/wiki/File:Manh_Squeezing_Sugar_Cane_Juice_-_Dien_Bien_Phu_-_Vietnam_(48159230787).jpg"
+ },
+ "d_tra_da": {
+  "author": "Editor at Large",
+  "file": "File:Iced tea with ice cubes.jpg",
+  "license": "CC BY-SA 2.5",
+  "licenseUrl": "https://creativecommons.org/licenses/by-sa/2.5",
+  "page": "https://commons.wikimedia.org/wiki/File:Iced_tea_with_ice_cubes.jpg"
+ },
+ "d_water": {
+  "author": "Thad Zajdowicz",
+  "file": "File:Water Bottles Image.png",
+  "license": "CC0",
+  "licenseUrl": "http://creativecommons.org/publicdomain/zero/1.0/deed.en",
+  "page": "https://commons.wikimedia.org/wiki/File:Water_Bottles_Image.png"
+ },
+ "f_banh_bao": {
+  "author": "Sue Le",
+  "file": "File:Banhbao.jpg",
+  "license": "CC BY-SA 3.0",
+  "licenseUrl": "https://creativecommons.org/licenses/by-sa/3.0",
+  "page": "https://commons.wikimedia.org/wiki/File:Banhbao.jpg"
+ },
+ "f_banh_mi": {
+  "author": "経済特区",
+  "file": "File:Bánh mi Sandwich(Takadanobaba)IMG 20220215 104413 03.jpg",
+  "license": "CC BY-SA 4.0",
+  "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+  "page": "https://commons.wikimedia.org/wiki/File:B%C3%A1nh_mi_Sandwich(Takadanobaba)IMG_20220215_104413_03.jpg"
+ },
+ "f_banh_xeo": {
+  "author": "Ser Amantio di Nicolao",
+  "file": "File:Bánh xèo with pork sausage and shrimp served with various garnishes.jpg",
+  "license": "CC BY-SA 4.0",
+  "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+  "page": "https://commons.wikimedia.org/wiki/File:B%C3%A1nh_x%C3%A8o_with_pork_sausage_and_shrimp_served_with_various_garnishes.jpg"
+ },
+ "f_bun_cha": {
+  "author": "Weetjesman",
+  "file": "File:Bun cha Hanoi.jpg",
+  "license": "CC BY-SA 4.0",
+  "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+  "page": "https://commons.wikimedia.org/wiki/File:Bun_cha_Hanoi.jpg"
+ },
+ "f_cheburek": {
+  "author": "Loyna",
+  "file": "File:Burek.jpg",
+  "license": "CC BY-SA 2.5",
+  "licenseUrl": "https://creativecommons.org/licenses/by-sa/2.5",
+  "page": "https://commons.wikimedia.org/wiki/File:Burek.jpg"
+ },
+ "f_chili": {
+  "author": "Kham Tran - www.khamtran.com",
+  "file": "File:Bun-Bo-Hue-from-Huong-Giang-2011.jpg",
+  "license": "CC BY 3.0",
+  "licenseUrl": "https://creativecommons.org/licenses/by/3.0",
+  "page": "https://commons.wikimedia.org/wiki/File:Bun-Bo-Hue-from-Huong-Giang-2011.jpg"
+ },
+ "f_com_tam": {
+  "author": "Christopher Crouzet",
+  "file": "File:Cơm Tấm, Da Nang, Vietnam.jpg",
+  "license": "CC BY-SA 4.0",
+  "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+  "page": "https://commons.wikimedia.org/wiki/File:C%C6%A1m_T%E1%BA%A5m,_Da_Nang,_Vietnam.jpg"
+ },
+ "f_corn": {
+  "author": "Krish Dulal",
+  "file": "File:Roasted corn NP.jpg",
+  "license": "CC BY-SA 3.0",
+  "licenseUrl": "https://creativecommons.org/licenses/by-sa/3.0",
+  "page": "https://commons.wikimedia.org/wiki/File:Roasted_corn_NP.jpg"
+ },
+ "f_durian": {
+  "author": "Rod Waddington",
+  "file": "File:Durian Fruit in Yunnan.jpg",
+  "license": "CC BY-SA 2.0",
+  "licenseUrl": "https://creativecommons.org/licenses/by-sa/2.0",
+  "page": "https://commons.wikimedia.org/wiki/File:Durian_Fruit_in_Yunnan.jpg"
+ },
+ "f_ice_cream": {
+  "author": "Cherry Darlin'",
+  "file": "File:I scream You scream.jpg",
+  "license": "CC BY-SA 2.0",
+  "licenseUrl": "https://creativecommons.org/licenses/by-sa/2.0",
+  "page": "https://commons.wikimedia.org/wiki/File:I_scream_You_scream.jpg"
+ },
+ "f_noodles": {
+  "author": "Quercus acuta",
+  "file": "File:Nissin Cup Noodle (Original) - 01.jpg",
+  "license": "CC BY-SA 4.0",
+  "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+  "page": "https://commons.wikimedia.org/wiki/File:Nissin_Cup_Noodle_(Original)_-_01.jpg"
+ },
+ "f_pho": {
+  "author": "Codename5281",
+  "file": "File:Phở bò, Cầu Giấy, Hà Nội.jpg",
+  "license": "CC BY-SA 3.0",
+  "licenseUrl": "https://creativecommons.org/licenses/by-sa/3.0",
+  "page": "https://commons.wikimedia.org/wiki/File:Ph%E1%BB%9F_b%C3%B2,_C%E1%BA%A7u_Gi%E1%BA%A5y,_H%C3%A0_N%E1%BB%99i.jpg"
+ },
+ "f_pirozhok": {
+  "author": "Pannet",
+  "file": "File:Пирожки 03.jpg",
+  "license": "CC BY-SA 4.0",
+  "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+  "page": "https://commons.wikimedia.org/wiki/File:%D0%9F%D0%B8%D1%80%D0%BE%D0%B6%D0%BA%D0%B8_03.jpg"
+ },
+ "f_shawarma": {
+  "author": "Andy Li",
+  "file": "File:Handmade Chicken Shawarma Wrap - Lavash.jpg",
+  "license": "CC0",
+  "licenseUrl": "http://creativecommons.org/publicdomain/zero/1.0/deed.en",
+  "page": "https://commons.wikimedia.org/wiki/File:Handmade_Chicken_Shawarma_Wrap_-_Lavash.jpg"
+ },
+ "f_souvlaki": {
+  "author": "Miyagawa",
+  "file": "File:Souvlaki in Athens.JPG",
+  "license": "CC BY-SA 4.0",
+  "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+  "page": "https://commons.wikimedia.org/wiki/File:Souvlaki_in_Athens.JPG"
+ },
+ "f_spring_rolls": {
+  "author": "M Ameen",
+  "file": "File:Chả giò.jpg",
+  "license": "CC0",
+  "licenseUrl": "http://creativecommons.org/publicdomain/zero/1.0/deed.en",
+  "page": "https://commons.wikimedia.org/wiki/File:Ch%E1%BA%A3_gi%C3%B2.jpg"
+ },
+ "s_ba_na": {
+  "author": "Vivu Vietnam",
+  "file": "File:Cable Car at Sun World Ba Na Hills in the sunset.jpg",
+  "license": "CC BY-SA 4.0",
+  "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+  "page": "https://commons.wikimedia.org/wiki/File:Cable_Car_at_Sun_World_Ba_Na_Hills_in_the_sunset.jpg"
+ },
+ "s_bao_dai": {
+  "author": "Diane Selwyn (talk)",
+  "file": "File:Bao Dai's Summer Palace 08.jpg",
+  "license": "Public domain",
+  "licenseUrl": "",
+  "page": "https://commons.wikimedia.org/wiki/File:Bao_Dai%27s_Summer_Palace_08.jpg"
+ },
+ "s_ben_thanh": {
+  "author": "Bahnfrend",
+  "file": "File:Ben Thanh Market, 2023 (05).jpg",
+  "license": "CC BY-SA 4.0",
+  "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+  "page": "https://commons.wikimedia.org/wiki/File:Ben_Thanh_Market,_2023_(05).jpg"
+ },
+ "s_crazy_house": {
+  "author": "Tom Ravenscroft",
+  "file": "File:Hang Nga guesthouse 02.jpg",
+  "license": "CC BY 1.0",
+  "licenseUrl": "https://creativecommons.org/licenses/by/1.0",
+  "page": "https://commons.wikimedia.org/wiki/File:Hang_Nga_guesthouse_02.jpg"
+ },
+ "s_cu_chi": {
+  "author": "dronepicr",
+  "file": "File:Entrance Cu Chi Tunnel Vietnam (25673144018).jpg",
+  "license": "CC BY 2.0",
+  "licenseUrl": "https://creativecommons.org/licenses/by/2.0",
+  "page": "https://commons.wikimedia.org/wiki/File:Entrance_Cu_Chi_Tunnel_Vietnam_(25673144018).jpg"
+ },
+ "s_dalat_market": {
+  "author": "The Erica Chang",
+  "file": "File:Dalat night market - panoramio.jpg",
+  "license": "CC BY 3.0",
+  "licenseUrl": "https://creativecommons.org/licenses/by/3.0",
+  "page": "https://commons.wikimedia.org/wiki/File:Dalat_night_market_-_panoramio.jpg"
+ },
+ "s_dalat_station": {
+  "author": "Diane Selwyn (talk)",
+  "file": "File:Da Lat train station 02.JPG",
+  "license": "Public domain",
+  "licenseUrl": "",
+  "page": "https://commons.wikimedia.org/wiki/File:Da_Lat_train_station_02.JPG"
+ },
+ "s_datanla": {
+  "author": "Du Tran",
+  "file": "File:Datanla Waterfall 1.jpg",
+  "license": "CC BY 2.0",
+  "licenseUrl": "https://creativecommons.org/licenses/by/2.0",
+  "page": "https://commons.wikimedia.org/wiki/File:Datanla_Waterfall_1.jpg"
+ },
+ "s_dragon_bridge": {
+  "author": "P. Hughes",
+  "file": "File:Da Nang - Dragon Bridge.jpg",
+  "license": "CC BY 4.0",
+  "licenseUrl": "https://creativecommons.org/licenses/by/4.0",
+  "page": "https://commons.wikimedia.org/wiki/File:Da_Nang_-_Dragon_Bridge.jpg"
+ },
+ "s_golden_bridge": {
+  "author": "This Photo was taken by Supanut Arunoprayote. Feel free to use any of my images, but please mention me as the author and",
+  "file": "File:Golden Bridge, Da Nang (I).jpg",
+  "license": "CC BY 4.0",
+  "licenseUrl": "https://creativecommons.org/licenses/by/4.0",
+  "page": "https://commons.wikimedia.org/wiki/File:Golden_Bridge,_Da_Nang_(I).jpg"
+ },
+ "s_hai_van": {
+  "author": "Benjamin Arnold",
+  "file": "File:Hai Van Pass (182155103).jpeg",
+  "license": "CC BY 3.0",
+  "licenseUrl": "https://creativecommons.org/licenses/by/3.0",
+  "page": "https://commons.wikimedia.org/wiki/File:Hai_Van_Pass_(182155103).jpeg"
+ },
+ "s_halong": {
+  "author": "Jakub Hałun",
+  "file": "File:View of sea from Titov Island, Ha Long Bay, Vietnam, 20240128 1337 3732.jpg",
+  "license": "CC BY 4.0",
+  "licenseUrl": "https://creativecommons.org/licenses/by/4.0",
+  "page": "https://commons.wikimedia.org/wiki/File:View_of_sea_from_Titov_Island,_Ha_Long_Bay,_Vietnam,_20240128_1337_3732.jpg"
+ },
+ "s_hoan_kiem": {
+  "author": "P. Hughes",
+  "file": "File:Hanoi - Turtle Tower (Tháp Rùa), Hoàn Kiếm Lake.jpg",
+  "license": "CC BY 4.0",
+  "licenseUrl": "https://creativecommons.org/licenses/by/4.0",
+  "page": "https://commons.wikimedia.org/wiki/File:Hanoi_-_Turtle_Tower_(Th%C3%A1p_R%C3%B9a),_Ho%C3%A0n_Ki%E1%BA%BFm_Lake.jpg"
+ },
+ "s_hoian": {
+  "author": "Christophe95",
+  "file": "File:Lanterns in Hoi An 3.jpg",
+  "license": "CC BY-SA 4.0",
+  "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+  "page": "https://commons.wikimedia.org/wiki/File:Lanterns_in_Hoi_An_3.jpg"
+ },
+ "s_hon_chong": {
+  "author": "Vinhtantran",
+  "file": "File:Hon Chong seen from the hill.JPG",
+  "license": "CC BY-SA 3.0",
+  "licenseUrl": "https://creativecommons.org/licenses/by-sa/3.0",
+  "page": "https://commons.wikimedia.org/wiki/File:Hon_Chong_seen_from_the_hill.JPG"
+ },
+ "s_hue": {
+  "author": "This Photo was taken by Supanut Arunoprayote. Feel free to use any of my images, but please mention me as the author and",
+  "file": "File:Meridian Gate, Hue (I).jpg",
+  "license": "CC BY 4.0",
+  "licenseUrl": "https://creativecommons.org/licenses/by/4.0",
+  "page": "https://commons.wikimedia.org/wiki/File:Meridian_Gate,_Hue_(I).jpg"
+ },
+ "s_lady_buddha": {
+  "author": "Christophe95",
+  "file": "File:Linh Ung Pagoda 6.jpg",
+  "license": "CC BY-SA 4.0",
+  "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+  "page": "https://commons.wikimedia.org/wiki/File:Linh_Ung_Pagoda_6.jpg"
+ },
+ "s_langbiang": {
+  "author": "The Erica Chang",
+  "file": "File:Lang Biang mountain and tourist Jeeps in Da Lat Vietnam - panoramio.jpg",
+  "license": "CC BY 3.0",
+  "licenseUrl": "https://creativecommons.org/licenses/by/3.0",
+  "page": "https://commons.wikimedia.org/wiki/File:Lang_Biang_mountain_and_tourist_Jeeps_in_Da_Lat_Vietnam_-_panoramio.jpg"
+ },
+ "s_linh_phuoc": {
+  "author": "P. Hughes",
+  "file": "File:Da Lat - Linh Phuoc Temple 03.jpg",
+  "license": "CC BY 4.0",
+  "licenseUrl": "https://creativecommons.org/licenses/by/4.0",
+  "page": "https://commons.wikimedia.org/wiki/File:Da_Lat_-_Linh_Phuoc_Temple_03.jpg"
+ },
+ "s_long_son": {
+  "author": "Christophe95",
+  "file": "File:Long Son Pagoda 4.jpg",
+  "license": "CC BY-SA 4.0",
+  "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+  "page": "https://commons.wikimedia.org/wiki/File:Long_Son_Pagoda_4.jpg"
+ },
+ "s_marble_mountains": {
+  "author": "Andre Hospers",
+  "file": "File:Marble Mountain Hoi An, Da Nang (71468).jpg",
+  "license": "CC BY 4.0",
+  "licenseUrl": "https://creativecommons.org/licenses/by/4.0",
+  "page": "https://commons.wikimedia.org/wiki/File:Marble_Mountain_Hoi_An,_Da_Nang_(71468).jpg"
+ },
+ "s_mui_ne": {
+  "author": "Vyacheslav Argenberg",
+  "file": "File:Vietnam, Mui Ne sand dunes.jpg",
+  "license": "CC BY 4.0",
+  "licenseUrl": "https://creativecommons.org/licenses/by/4.0",
+  "page": "https://commons.wikimedia.org/wiki/File:Vietnam,_Mui_Ne_sand_dunes.jpg"
+ },
+ "s_my_khe": {
+  "author": "Jpatokal",
+  "file": "File:My Khe Beach Danang Coastline.jpg",
+  "license": "CC BY-SA 4.0",
+  "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+  "page": "https://commons.wikimedia.org/wiki/File:My_Khe_Beach_Danang_Coastline.jpg"
+ },
+ "s_po_nagar": {
+  "author": "Tervlugt",
+  "file": "File:Po Nagar Nha Trang Vietnam.JPG",
+  "license": "CC BY 3.0",
+  "licenseUrl": "https://creativecommons.org/licenses/by/3.0",
+  "page": "https://commons.wikimedia.org/wiki/File:Po_Nagar_Nha_Trang_Vietnam.JPG"
+ },
+ "s_saigon_post": {
+  "author": "Steffen Schmitz (more photos)",
+  "file": "File:Ho Chi Minh City, Central Post Office, 2020-01 CN-01.jpg",
+  "license": "CC BY-SA 4.0",
+  "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+  "page": "https://commons.wikimedia.org/wiki/File:Ho_Chi_Minh_City,_Central_Post_Office,_2020-01_CN-01.jpg"
+ },
+ "s_train_street": {
+  "author": "NKSTTSSHNVN",
+  "file": "File:Hanoi train street - NKS.jpg",
+  "license": "CC BY-SA 4.0",
+  "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+  "page": "https://commons.wikimedia.org/wiki/File:Hanoi_train_street_-_NKS.jpg"
+ },
+ "s_truc_lam": {
+  "author": "The original uploader was Liftold at Vietnamese Wikipedia.",
+  "file": "File:Zen Monastery Truc Lam Da Lat.JPG",
+  "license": "CC BY-SA 3.0",
+  "licenseUrl": "https://creativecommons.org/licenses/by-sa/3.0",
+  "page": "https://commons.wikimedia.org/wiki/File:Zen_Monastery_Truc_Lam_Da_Lat.JPG"
+ },
+ "s_valley_love": {
+  "author": "calflier001",
+  "file": "File:VALLEY OF LOVE DA LAT VIETNAM JAN 2012 (6867408624).jpg",
+  "license": "CC BY-SA 2.0",
+  "licenseUrl": "https://creativecommons.org/licenses/by-sa/2.0",
+  "page": "https://commons.wikimedia.org/wiki/File:VALLEY_OF_LOVE_DA_LAT_VIETNAM_JAN_2012_(6867408624).jpg"
+ },
+ "s_vinpearl": {
+  "author": "Андрей Бобровский",
+  "file": "File:Vinpearl Nha Trang cable car - panoramio (173).jpg",
+  "license": "CC BY 3.0",
+  "licenseUrl": "https://creativecommons.org/licenses/by/3.0",
+  "page": "https://commons.wikimedia.org/wiki/File:Vinpearl_Nha_Trang_cable_car_-_panoramio_(173).jpg"
+ },
+ "s_xuan_huong": {
+  "author": "Diane Selwyn (talk)",
+  "file": "File:Xuan Huong Lake 09.jpg",
+  "license": "Public domain",
+  "licenseUrl": "",
+  "page": "https://commons.wikimedia.org/wiki/File:Xuan_Huong_Lake_09.jpg"
+ },
+ "t_airport": {
+  "author": "Eric Fischer",
+  "file": "File:Restroom gender icons (42050722141).jpg",
+  "license": "CC BY 2.0",
+  "licenseUrl": "https://creativecommons.org/licenses/by/2.0",
+  "page": "https://commons.wikimedia.org/wiki/File:Restroom_gender_icons_(42050722141).jpg"
+ },
+ "t_auto": {
+  "author": "Abdoucondorcet",
+  "file": "File:Sanisette devant l'entrée du cimetière, avenue du Cimetière (Toulouse).jpg",
+  "license": "CC0",
+  "licenseUrl": "http://creativecommons.org/publicdomain/zero/1.0/deed.en",
+  "page": "https://commons.wikimedia.org/wiki/File:Sanisette_devant_l%27entr%C3%A9e_du_cimeti%C3%A8re,_avenue_du_Cimeti%C3%A8re_(Toulouse).jpg"
+ },
+ "t_beach": {
+  "author": "Daniel Capilla",
+  "file": "File:Graffiti on toilet building in Pedregalejo Beach 04.jpg",
+  "license": "CC BY-SA 4.0",
+  "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+  "page": "https://commons.wikimedia.org/wiki/File:Graffiti_on_toilet_building_in_Pedregalejo_Beach_04.jpg"
+ },
+ "t_bus": {
+  "author": "LMP 2001",
+  "file": "File:Victory Liner 575 (THACO Bluesky Volvo B8R; interior daytime) 2026-01-04.jpg",
+  "license": "CC BY-SA 4.0",
+  "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+  "page": "https://commons.wikimedia.org/wiki/File:Victory_Liner_575_(THACO_Bluesky_Volvo_B8R;_interior_daytime)_2026-01-04.jpg"
+ },
+ "t_bushes": {
+  "author": "shankar s. from Poona (pune), India, India",
+  "file": "File:The rains on the previous night had made the jungle paths wet and slushy (49695780048).jpg",
+  "license": "CC BY 2.0",
+  "licenseUrl": "https://creativecommons.org/licenses/by/2.0",
+  "page": "https://commons.wikimedia.org/wiki/File:The_rains_on_the_previous_night_had_made_the_jungle_paths_wet_and_slushy_(49695780048).jpg"
+ },
+ "t_gas": {
+  "author": "Roy Egloff",
+  "file": "File:MA.SS. 2018-08-15 filling-station 1415 3x2-R 5K.jpg",
+  "license": "CC BY-SA 4.0",
+  "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+  "page": "https://commons.wikimedia.org/wiki/File:MA.SS._2018-08-15_filling-station_1415_3x2-R_5K.jpg"
+ },
+ "t_japan": {
+  "author": "Volgar from Stockholm, Sweden",
+  "file": "File:Controls of a typical toilet in Japan. (35400585742).jpg",
+  "license": "CC BY-SA 2.0",
+  "licenseUrl": "https://creativecommons.org/licenses/by-sa/2.0",
+  "page": "https://commons.wikimedia.org/wiki/File:Controls_of_a_typical_toilet_in_Japan._(35400585742).jpg"
+ },
+ "t_market": {
+  "author": "사랑",
+  "file": "File:Yudun market old toilet.jpg",
+  "license": "Public domain",
+  "licenseUrl": "",
+  "page": "https://commons.wikimedia.org/wiki/File:Yudun_market_old_toilet.jpg"
+ },
+ "t_museum": {
+  "author": "Kaartic",
+  "file": "File:Restroom at 221B Baker Street.jpg",
+  "license": "CC BY-SA 4.0",
+  "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+  "page": "https://commons.wikimedia.org/wiki/File:Restroom_at_221B_Baker_Street.jpg"
+ },
+ "t_outhouse": {
+  "author": "Carol M. Highsmith",
+  "file": "File:Outhouse at LSU Rural Life Museum.jpg",
+  "license": "Public domain",
+  "licenseUrl": "",
+  "page": "https://commons.wikimedia.org/wiki/File:Outhouse_at_LSU_Rural_Life_Museum.jpg"
+ },
+ "t_paid": {
+  "author": "Tiia Monto",
+  "file": "File:Swansea bus station toilets.jpg",
+  "license": "CC BY-SA 3.0",
+  "licenseUrl": "https://creativecommons.org/licenses/by-sa/3.0",
+  "page": "https://commons.wikimedia.org/wiki/File:Swansea_bus_station_toilets.jpg"
+ },
+ "t_park": {
+  "author": "Stephen Craven",
+  "file": "File:Public toilets in Congleton Park - geograph.org.uk - 7321581.jpg",
+  "license": "CC BY-SA 2.0",
+  "licenseUrl": "https://creativecommons.org/licenses/by-sa/2.0",
+  "page": "https://commons.wikimedia.org/wiki/File:Public_toilets_in_Congleton_Park_-_geograph.org.uk_-_7321581.jpg"
+ },
+ "t_plane": {
+  "author": "Kristoferb",
+  "file": "File:First class Lavatory with Window.jpg",
+  "license": "CC BY-SA 3.0",
+  "licenseUrl": "https://creativecommons.org/licenses/by-sa/3.0",
+  "page": "https://commons.wikimedia.org/wiki/File:First_class_Lavatory_with_Window.jpg"
+ },
+ "t_portable": {
+  "author": "Dor Shabashewitz",
+  "file": "File:Portable toilets in Atyrau.jpg",
+  "license": "CC BY-SA 4.0",
+  "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+  "page": "https://commons.wikimedia.org/wiki/File:Portable_toilets_in_Atyrau.jpg"
+ },
+ "t_public": {
+  "author": "Vuong Tri Binh",
+  "file": "File:Public toilets in the suburbs of Hanoi in 2014.jpg",
+  "license": "CC BY-SA 4.0",
+  "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+  "page": "https://commons.wikimedia.org/wiki/File:Public_toilets_in_the_suburbs_of_Hanoi_in_2014.jpg"
+ },
+ "t_squat": {
+  "author": "BiiJii",
+  "file": "File:Squat toilet ILO Geneva.jpg",
+  "license": "CC0",
+  "licenseUrl": "http://creativecommons.org/publicdomain/zero/1.0/deed.en",
+  "page": "https://commons.wikimedia.org/wiki/File:Squat_toilet_ILO_Geneva.jpg"
+ },
+ "t_station": {
+  "author": "N509FZ",
+  "file": "File:Toilet 11 at Beijing South Railway Station arrivals (20200909165903).jpg",
+  "license": "CC BY-SA 4.0",
+  "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+  "page": "https://commons.wikimedia.org/wiki/File:Toilet_11_at_Beijing_South_Railway_Station_arrivals_(20200909165903).jpg"
+ },
+ "t_train": {
+  "author": "Utente:Jollyroger (Federico Cantoni)",
+  "file": "File:Train toilet R.jpg",
+  "license": "CC BY-SA 2.5",
+  "licenseUrl": "https://creativecommons.org/licenses/by-sa/2.5",
+  "page": "https://commons.wikimedia.org/wiki/File:Train_toilet_R.jpg"
+ },
+ "t_view": {
+  "author": "larsjuh",
+  "file": "File:Window behind the toilet (14452005846).jpg",
+  "license": "CC BY 2.0",
+  "licenseUrl": "https://creativecommons.org/licenses/by/2.0",
+  "page": "https://commons.wikimedia.org/wiki/File:Window_behind_the_toilet_(14452005846).jpg"
+ },
+ "t_waterfall": {
+  "author": "Rick Obst",
+  "file": "File:Stone restrooms built by the Civilian Conservation Corps in Silver Falls State Park.jpg",
+  "license": "CC BY 2.0",
+  "licenseUrl": "https://creativecommons.org/licenses/by/2.0",
+  "page": "https://commons.wikimedia.org/wiki/File:Stone_restrooms_built_by_the_Civilian_Conservation_Corps_in_Silver_Falls_State_Park.jpg"
+ }
+}
