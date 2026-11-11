@@ -188,10 +188,10 @@ export const CREDITS = {
   "p": "https://commons.wikimedia.org/wiki/File:I_scream_You_scream.jpg"
  },
  "f_jellyfish": {
-  "a": "Takeaway",
-  "l": "CC BY-SA 3.0",
-  "lu": "https://creativecommons.org/licenses/by-sa/3.0",
-  "p": "https://commons.wikimedia.org/wiki/File:Jellyfish_and_roast_duck_salad.JPG"
+  "a": "Mx. Granger",
+  "l": "CC0",
+  "lu": "http://creativecommons.org/publicdomain/zero/1.0/deed.en",
+  "p": "https://commons.wikimedia.org/wiki/File:Jellyfish_in_chili_oil.jpg"
  },
  "f_korean_bbq": {
   "a": "suksim",
