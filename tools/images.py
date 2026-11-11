@@ -7,6 +7,7 @@
                                              для сравнения (номер на миниатюре = номер кандидата)
   python3 tools/images.py fetch  [id ...]  – скачать выбранную картинку каждой карты
   python3 tools/images.py sheet  [id ...]  – контактные листы для просмотра глазами
+  python3 tools/images.py export           – выгрузить кандидатов для страницы review.html
   python3 tools/images.py final  [id ...]  – обрезать до 4:3, сохранить img/cards/*.webp,
                                              пересобрать js/credits.js
 
@@ -240,6 +241,27 @@ def cmd_peek(ids):
         print(out, flush=True)
 
 
+def cmd_export(_ids):
+    """Список кандидатов для страницы проверки review.html."""
+    picks = load_json(PICKS, {})
+    out = {}
+    for cid in all_ids():
+        cur = picks.get(cid, {}).get('file')
+        cands = list(cands_of(cid)['cands'])
+        if cur and all(c['title'] != cur for c in cands):
+            cands.insert(0, chosen(cid, picks))
+        out[cid] = {
+            'current': cur,
+            'query': cands_of(cid)['query'],
+            'cands': [{'t': c['title'], 'a': c['artist'] or c['credit'], 'l': c['license']} for c in cands],
+        }
+    path = os.path.join(ROOT, 'review', 'candidates.json')
+    os.makedirs(os.path.dirname(path), exist_ok=True)
+    with open(path, 'w', encoding='utf-8') as f:
+        json.dump(out, f, ensure_ascii=False, separators=(',', ':'))
+    print(path, len(out), 'карт,', sum(len(v['cands']) for v in out.values()), 'кандидатов')
+
+
 def orig_path(cid):
     return os.path.join(ORIG, cid + '.jpg')
 
@@ -329,7 +351,7 @@ def cmd_final(ids):
 
 
 if __name__ == '__main__':
-    cmds = {'search': cmd_search, 'list': cmd_list, 'peek': cmd_peek, 'fetch': cmd_fetch, 'sheet': cmd_sheet, 'final': cmd_final}
+    cmds = {'search': cmd_search, 'list': cmd_list, 'peek': cmd_peek, 'export': cmd_export, 'fetch': cmd_fetch, 'sheet': cmd_sheet, 'final': cmd_final}
     cmd = sys.argv[1] if len(sys.argv) > 1 else ''
     if cmd in cmds:
         cmds[cmd](sys.argv[2:])
