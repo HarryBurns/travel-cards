@@ -34,6 +34,13 @@
   "licenseUrl": "https://creativecommons.org/licenses/by-sa/3.0",
   "page": "https://commons.wikimedia.org/wiki/File:Coconut_Drink,_Pangandaran.JPG"
  },
+ "d_coconut_coffee": {
+  "author": "Andy Li",
+  "file": "File:Vietnamese Salted Coffee & Xin chao's coconut Coffee - Xin Chao, Eastbourne 2026-08-14.jpg",
+  "license": "CC0",
+  "licenseUrl": "http://creativecommons.org/publicdomain/zero/1.0/deed.en",
+  "page": "https://commons.wikimedia.org/wiki/File:Vietnamese_Salted_Coffee_%26_Xin_chao%27s_coconut_Coffee_-_Xin_Chao,_Eastbourne_2026-08-14.jpg"
+ },
  "d_egg_coffee": {
   "author": "David McKelvey from Brisbane, Australia",
   "file": "File:Egg Coffee (6923068614).jpg",
@@ -153,6 +160,13 @@
   "licenseUrl": "https://creativecommons.org/licenses/by-sa/3.0",
   "page": "https://commons.wikimedia.org/wiki/File:Roasted_corn_NP.jpg"
  },
+ "f_dalat_pizza": {
+  "author": "Blueconcorde",
+  "file": "File:Banh trang nuong dalat.jpg",
+  "license": "CC0",
+  "licenseUrl": "http://creativecommons.org/publicdomain/zero/1.0/deed.en",
+  "page": "https://commons.wikimedia.org/wiki/File:Banh_trang_nuong_dalat.jpg"
+ },
  "f_durian": {
   "author": "Rod Waddington",
   "file": "File:Durian Fruit in Yunnan.jpg",
@@ -166,6 +180,13 @@
   "license": "CC BY-SA 2.0",
   "licenseUrl": "https://creativecommons.org/licenses/by-sa/2.0",
   "page": "https://commons.wikimedia.org/wiki/File:I_scream_You_scream.jpg"
+ },
+ "f_mango": {
+  "author": "Salil Kumar Mukherjee",
+  "file": "File:'Dasheri' mango (sliced).jpg",
+  "license": "CC BY-SA 4.0",
+  "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+  "page": "https://commons.wikimedia.org/wiki/File:%27Dasheri%27_mango_(sliced).jpg"
  },
  "f_noodles": {
   "author": "Quercus acuta",
@@ -188,6 +209,13 @@
   "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
   "page": "https://commons.wikimedia.org/wiki/File:%D0%9F%D0%B8%D1%80%D0%BE%D0%B6%D0%BA%D0%B8_03.jpg"
  },
+ "f_seafood": {
+  "author": "PattayaPatrol",
+  "file": "File:DSCF1106 Grilled whole squid skewers sizzling on a market stall with golden fried snacks in the background.jpg",
+  "license": "CC BY-SA 4.0",
+  "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+  "page": "https://commons.wikimedia.org/wiki/File:DSCF1106_Grilled_whole_squid_skewers_sizzling_on_a_market_stall_with_golden_fried_snacks_in_the_background.jpg"
+ },
  "f_shawarma": {
   "author": "Andy Li",
   "file": "File:Handmade Chicken Shawarma Wrap - Lavash.jpg",
@@ -208,6 +236,132 @@
   "license": "CC0",
   "licenseUrl": "http://creativecommons.org/publicdomain/zero/1.0/deed.en",
   "page": "https://commons.wikimedia.org/wiki/File:Ch%E1%BA%A3_gi%C3%B2.jpg"
+ },
+ "j_airport": {
+  "author": "Asurnipal",
+  "file": "File:Madeira-Funchal airport-Baggage carousel-01ASD.jpg",
+  "license": "CC BY-SA 4.0",
+  "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+  "page": "https://commons.wikimedia.org/wiki/File:Madeira-Funchal_airport-Baggage_carousel-01ASD.jpg"
+ },
+ "j_amusement": {
+  "author": "Syced",
+  "file": "File:July 2023 Suoi Tien Park 25.jpg",
+  "license": "CC0",
+  "licenseUrl": "http://creativecommons.org/publicdomain/zero/1.0/deed.en",
+  "page": "https://commons.wikimedia.org/wiki/File:July_2023_Suoi_Tien_Park_25.jpg"
+ },
+ "j_cafe": {
+  "author": "Phương Huy (thảo luận)",
+  "file": "File:Cafe Lối Xưa, đường Gò Dầu, Tân Phú, tháng 9 năm 2018 (12).jpg",
+  "license": "Public domain",
+  "licenseUrl": "",
+  "page": "https://commons.wikimedia.org/wiki/File:Cafe_L%E1%BB%91i_X%C6%B0a,_%C4%91%C6%B0%E1%BB%9Dng_G%C3%B2_D%E1%BA%A7u,_T%C3%A2n_Ph%C3%BA,_th%C3%A1ng_9_n%C4%83m_2018_(12).jpg"
+ },
+ "j_cinema": {
+  "author": "BOKONGNAUTI Leapwo",
+  "file": "File:HK TKO 將軍澳 Tseung Kwan O PopCorn mall Star Cinemas main lobby March 2022 Px3 02.jpg",
+  "license": "CC BY-SA 4.0",
+  "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+  "page": "https://commons.wikimedia.org/wiki/File:HK_TKO_%E5%B0%87%E8%BB%8D%E6%BE%B3_Tseung_Kwan_O_PopCorn_mall_Star_Cinemas_main_lobby_March_2022_Px3_02.jpg"
+ },
+ "j_coffeeshop": {
+  "author": "Hirho",
+  "file": "File:Boathouse Ōhori Park The coffee shop Ōhorikōen Chūō-ku Fukuoka 20260605 180144.jpg",
+  "license": "CC BY 4.0",
+  "licenseUrl": "https://creativecommons.org/licenses/by/4.0",
+  "page": "https://commons.wikimedia.org/wiki/File:Boathouse_%C5%8Chori_Park_The_coffee_shop_%C5%8Chorik%C5%8Den_Ch%C5%AB%C5%8D-ku_Fukuoka_20260605_180144.jpg"
+ },
+ "j_dining_car": {
+  "author": "Ben Schumin",
+  "file": "File:Amtrak superliner dining car (Auto Train).jpg",
+  "license": "CC BY-SA 3.0",
+  "licenseUrl": "https://creativecommons.org/licenses/by-sa/3.0",
+  "page": "https://commons.wikimedia.org/wiki/File:Amtrak_superliner_dining_car_(Auto_Train).jpg"
+ },
+ "j_fastfood": {
+  "author": "thalling55",
+  "file": "File:The only American fast food chain that I saw anywhere in Vietnam. (1348234572).jpg",
+  "license": "CC BY 2.0",
+  "licenseUrl": "https://creativecommons.org/licenses/by/2.0",
+  "page": "https://commons.wikimedia.org/wiki/File:The_only_American_fast_food_chain_that_I_saw_anywhere_in_Vietnam._(1348234572).jpg"
+ },
+ "j_foodcourt": {
+  "author": "Stephan van Helden",
+  "file": "File:Food court in the Mall of Tripla.jpg",
+  "license": "CC BY-SA 4.0",
+  "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+  "page": "https://commons.wikimedia.org/wiki/File:Food_court_in_the_Mall_of_Tripla.jpg"
+ },
+ "j_guesthouse": {
+  "author": "McKay Savage from London, UK",
+  "file": "File:Vietnam 08 - 091 - my homestay (3184886982).jpg",
+  "license": "CC BY 2.0",
+  "licenseUrl": "https://creativecommons.org/licenses/by/2.0",
+  "page": "https://commons.wikimedia.org/wiki/File:Vietnam_08_-_091_-_my_homestay_(3184886982).jpg"
+ },
+ "j_hostel": {
+  "author": "Sgroey",
+  "file": "File:Hostel 6-bed dorm room, Kuching, Malaysia.jpg",
+  "license": "CC BY 4.0",
+  "licenseUrl": "https://creativecommons.org/licenses/by/4.0",
+  "page": "https://commons.wikimedia.org/wiki/File:Hostel_6-bed_dorm_room,_Kuching,_Malaysia.jpg"
+ },
+ "j_hotel": {
+  "author": "Jumpy542",
+  "file": "File:My Hotel room at Grand Hotel Mackinac Island.jpg",
+  "license": "CC0",
+  "licenseUrl": "http://creativecommons.org/publicdomain/zero/1.0/deed.en",
+  "page": "https://commons.wikimedia.org/wiki/File:My_Hotel_room_at_Grand_Hotel_Mackinac_Island.jpg"
+ },
+ "j_mall": {
+  "author": "Amenoc",
+  "file": "File:Vincom Mega Mall Times City.jpg",
+  "license": "CC0",
+  "licenseUrl": "http://creativecommons.org/publicdomain/zero/1.0/deed.en",
+  "page": "https://commons.wikimedia.org/wiki/File:Vincom_Mega_Mall_Times_City.jpg"
+ },
+ "j_reception": {
+  "author": "Mattsjc",
+  "file": "File:Reception desk at Balch Hotel in Dufur, Oregon.jpg",
+  "license": "CC BY 4.0",
+  "licenseUrl": "https://creativecommons.org/licenses/by/4.0",
+  "page": "https://commons.wikimedia.org/wiki/File:Reception_desk_at_Balch_Hotel_in_Dufur,_Oregon.jpg"
+ },
+ "j_resort": {
+  "author": "missbossy",
+  "file": "File:Furama Resort Da Nang pool.jpg",
+  "license": "CC BY 2.0",
+  "licenseUrl": "https://creativecommons.org/licenses/by/2.0",
+  "page": "https://commons.wikimedia.org/wiki/File:Furama_Resort_Da_Nang_pool.jpg"
+ },
+ "j_rest_stop": {
+  "author": "Mcmorrl",
+  "file": "File:Night Buses at Rest Stop - Vietnam.jpg",
+  "license": "CC BY 4.0",
+  "licenseUrl": "https://creativecommons.org/licenses/by/4.0",
+  "page": "https://commons.wikimedia.org/wiki/File:Night_Buses_at_Rest_Stop_-_Vietnam.jpg"
+ },
+ "j_restaurant": {
+  "author": "Jaggery",
+  "file": "File:Vietnam Restaurant in Uplands Swansea - geograph.org.uk - 3953014.jpg",
+  "license": "CC BY-SA 2.0",
+  "licenseUrl": "https://creativecommons.org/licenses/by-sa/2.0",
+  "page": "https://commons.wikimedia.org/wiki/File:Vietnam_Restaurant_in_Uplands_Swansea_-_geograph.org.uk_-_3953014.jpg"
+ },
+ "j_shopping_center": {
+  "author": "Ermell",
+  "file": "File:Bamberg Atrium Rolltreppen-20180417-RM-171311.jpg",
+  "license": "CC BY-SA 4.0",
+  "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+  "page": "https://commons.wikimedia.org/wiki/File:Bamberg_Atrium_Rolltreppen-20180417-RM-171311.jpg"
+ },
+ "j_supermarket": {
+  "author": "trungydang",
+  "file": "File:Sieu thi Co opmart, Cong Quynh, Pham ngu lao, hcmvn - panoramio.jpg",
+  "license": "CC BY 3.0",
+  "licenseUrl": "https://creativecommons.org/licenses/by/3.0",
+  "page": "https://commons.wikimedia.org/wiki/File:Sieu_thi_Co_opmart,_Cong_Quynh,_Pham_ngu_lao,_hcmvn_-_panoramio.jpg"
  },
  "s_ba_na": {
   "author": "Vivu Vietnam",
@@ -328,6 +482,13 @@
   "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
   "page": "https://commons.wikimedia.org/wiki/File:Linh_Ung_Pagoda_6.jpg"
  },
+ "s_lam_vien": {
+  "author": "Damian Vo",
+  "file": "File:Lâm Viên square (August 7, 2018) (42208026670).jpg",
+  "license": "CC BY-SA 2.0",
+  "licenseUrl": "https://creativecommons.org/licenses/by-sa/2.0",
+  "page": "https://commons.wikimedia.org/wiki/File:L%C3%A2m_Vi%C3%AAn_square_(August_7,_2018)_(42208026670).jpg"
+ },
  "s_langbiang": {
   "author": "The Erica Chang",
   "file": "File:Lang Biang mountain and tourist Jeeps in Da Lat Vietnam - panoramio.jpg",
@@ -355,6 +516,13 @@
   "license": "CC BY 4.0",
   "licenseUrl": "https://creativecommons.org/licenses/by/4.0",
   "page": "https://commons.wikimedia.org/wiki/File:Marble_Mountain_Hoi_An,_Da_Nang_(71468).jpg"
+ },
+ "s_mud": {
+  "author": "Prayitno / Thank you for (12 millions +) view from Los Angeles, USA",
+  "file": "File:Mud Bath (24120323915).jpg",
+  "license": "CC BY 2.0",
+  "licenseUrl": "https://creativecommons.org/licenses/by/2.0",
+  "page": "https://commons.wikimedia.org/wiki/File:Mud_Bath_(24120323915).jpg"
  },
  "s_mui_ne": {
   "author": "Vyacheslav Argenberg",
@@ -440,6 +608,20 @@
   "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
   "page": "https://commons.wikimedia.org/wiki/File:Graffiti_on_toilet_building_in_Pedregalejo_Beach_04.jpg"
  },
+ "t_bidet": {
+  "author": "Karyev",
+  "file": "File:Bidet shower greek style.jpg",
+  "license": "CC BY-SA 4.0",
+  "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+  "page": "https://commons.wikimedia.org/wiki/File:Bidet_shower_greek_style.jpg"
+ },
+ "t_boat": {
+  "author": "SuSanA Secretariat",
+  "file": "File:Inspection of new toilet via boat (7414532588).jpg",
+  "license": "CC BY 2.0",
+  "licenseUrl": "https://creativecommons.org/licenses/by/2.0",
+  "page": "https://commons.wikimedia.org/wiki/File:Inspection_of_new_toilet_via_boat_(7414532588).jpg"
+ },
  "t_bus": {
   "author": "LMP 2001",
   "file": "File:Victory Liner 575 (THACO Bluesky Volvo B8R; interior daytime) 2026-01-04.jpg",
@@ -454,12 +636,47 @@
   "licenseUrl": "https://creativecommons.org/licenses/by/2.0",
   "page": "https://commons.wikimedia.org/wiki/File:The_rains_on_the_previous_night_had_made_the_jungle_paths_wet_and_slushy_(49695780048).jpg"
  },
+ "t_camping": {
+  "author": "Gustav Lindqvist",
+  "file": "File:Campsite with toilet by Kleinafallet.jpg",
+  "license": "CC BY-SA 4.0",
+  "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+  "page": "https://commons.wikimedia.org/wiki/File:Campsite_with_toilet_by_Kleinafallet.jpg"
+ },
+ "t_cleaning": {
+  "author": "Hingshaichvdco",
+  "file": "File:HK 石塘咀市政大廈 Shek Tong Tsui Public Library Study Room toilet out of service sign May 2018 IX2.jpg",
+  "license": "CC BY-SA 4.0",
+  "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+  "page": "https://commons.wikimedia.org/wiki/File:HK_%E7%9F%B3%E5%A1%98%E5%92%80%E5%B8%82%E6%94%BF%E5%A4%A7%E5%BB%88_Shek_Tong_Tsui_Public_Library_Study_Room_toilet_out_of_service_sign_May_2018_IX2.jpg"
+ },
+ "t_coffee": {
+  "author": "charlotte henard",
+  "file": "File:Deichman Bjørvika, Oslo - 53131859984.jpg",
+  "license": "CC BY-SA 2.0",
+  "licenseUrl": "https://creativecommons.org/licenses/by-sa/2.0",
+  "page": "https://commons.wikimedia.org/wiki/File:Deichman_Bj%C3%B8rvika,_Oslo_-_53131859984.jpg"
+ },
+ "t_fastfood": {
+  "author": "Huwaigaom 1000",
+  "file": "File:HK 西灣河 Sai Wan Ho night 興東邨 Hing Tung Estate Shopping Centre shop Fairwood Fast Food Restaurant n Exit toilet door July 2019 SSG 01.jpg",
+  "license": "CC BY-SA 4.0",
+  "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+  "page": "https://commons.wikimedia.org/wiki/File:HK_%E8%A5%BF%E7%81%A3%E6%B2%B3_Sai_Wan_Ho_night_%E8%88%88%E6%9D%B1%E9%82%A8_Hing_Tung_Estate_Shopping_Centre_shop_Fairwood_Fast_Food_Restaurant_n_Exit_toilet_door_July_2019_SSG_01.jpg"
+ },
  "t_gas": {
   "author": "Roy Egloff",
   "file": "File:MA.SS. 2018-08-15 filling-station 1415 3x2-R 5K.jpg",
   "license": "CC BY-SA 4.0",
   "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
   "page": "https://commons.wikimedia.org/wiki/File:MA.SS._2018-08-15_filling-station_1415_3x2-R_5K.jpg"
+ },
+ "t_hotel_lobby": {
+  "author": "Chris Light",
+  "file": "File:Ta-Ni-ki Do-Dam Nic-Con 2015-02-8 063.jpg",
+  "license": "CC BY-SA 4.0",
+  "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+  "page": "https://commons.wikimedia.org/wiki/File:Ta-Ni-ki_Do-Dam_Nic-Con_2015-02-8_063.jpg"
  },
  "t_japan": {
   "author": "Volgar from Stockholm, Sweden",
@@ -475,12 +692,26 @@
   "licenseUrl": "",
   "page": "https://commons.wikimedia.org/wiki/File:Yudun_market_old_toilet.jpg"
  },
+ "t_mountain": {
+  "author": "Σ64",
+  "file": "File:Miyamasanso02.JPG",
+  "license": "CC BY-SA 3.0",
+  "licenseUrl": "http://creativecommons.org/licenses/by-sa/3.0/",
+  "page": "https://commons.wikimedia.org/wiki/File:Miyamasanso02.JPG"
+ },
  "t_museum": {
   "author": "Kaartic",
   "file": "File:Restroom at 221B Baker Street.jpg",
   "license": "CC BY-SA 4.0",
   "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
   "page": "https://commons.wikimedia.org/wiki/File:Restroom_at_221B_Baker_Street.jpg"
+ },
+ "t_nopaper": {
+  "author": "Santeri Viinamäki",
+  "file": "File:No toilet paper.jpg",
+  "license": "CC BY-SA 4.0",
+  "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+  "page": "https://commons.wikimedia.org/wiki/File:No_toilet_paper.jpg"
  },
  "t_outhouse": {
   "author": "Carol M. Highsmith",
@@ -524,6 +755,13 @@
   "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
   "page": "https://commons.wikimedia.org/wiki/File:Public_toilets_in_the_suburbs_of_Hanoi_in_2014.jpg"
  },
+ "t_queue": {
+  "author": "玄史生",
+  "file": "File:Queues of Male Toilets after Morning Programs of 2015 Hsinchu AFB Open Day 20151121.jpg",
+  "license": "CC0",
+  "licenseUrl": "http://creativecommons.org/publicdomain/zero/1.0/deed.en",
+  "page": "https://commons.wikimedia.org/wiki/File:Queues_of_Male_Toilets_after_Morning_Programs_of_2015_Hsinchu_AFB_Open_Day_20151121.jpg"
+ },
  "t_squat": {
   "author": "BiiJii",
   "file": "File:Squat toilet ILO Geneva.jpg",
@@ -531,12 +769,26 @@
   "licenseUrl": "http://creativecommons.org/publicdomain/zero/1.0/deed.en",
   "page": "https://commons.wikimedia.org/wiki/File:Squat_toilet_ILO_Geneva.jpg"
  },
+ "t_staff": {
+  "author": "Jeff chenqinyi",
+  "file": "File:Bathroom staff.JPG",
+  "license": "CC BY-SA 3.0",
+  "licenseUrl": "https://creativecommons.org/licenses/by-sa/3.0",
+  "page": "https://commons.wikimedia.org/wiki/File:Bathroom_staff.JPG"
+ },
  "t_station": {
   "author": "N509FZ",
   "file": "File:Toilet 11 at Beijing South Railway Station arrivals (20200909165903).jpg",
   "license": "CC BY-SA 4.0",
   "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
   "page": "https://commons.wikimedia.org/wiki/File:Toilet_11_at_Beijing_South_Railway_Station_arrivals_(20200909165903).jpg"
+ },
+ "t_temple": {
+  "author": "User:Løken",
+  "file": "File:Buddhist temple in Kyoto (5).JPG",
+  "license": "CC BY-SA 3.0",
+  "licenseUrl": "https://creativecommons.org/licenses/by-sa/3.0",
+  "page": "https://commons.wikimedia.org/wiki/File:Buddhist_temple_in_Kyoto_(5).JPG"
  },
  "t_train": {
   "author": "Utente:Jollyroger (Federico Cantoni)",

@@ -31,6 +31,12 @@ export const CREDITS = {
   "lu": "https://creativecommons.org/licenses/by-sa/3.0",
   "p": "https://commons.wikimedia.org/wiki/File:Coconut_Drink,_Pangandaran.JPG"
  },
+ "d_coconut_coffee": {
+  "a": "Andy Li",
+  "l": "CC0",
+  "lu": "http://creativecommons.org/publicdomain/zero/1.0/deed.en",
+  "p": "https://commons.wikimedia.org/wiki/File:Vietnamese_Salted_Coffee_%26_Xin_chao%27s_coconut_Coffee_-_Xin_Chao,_Eastbourne_2026-08-14.jpg"
+ },
  "d_egg_coffee": {
   "a": "David McKelvey from Brisbane, Australia",
   "l": "CC BY 2.0",
@@ -133,6 +139,12 @@ export const CREDITS = {
   "lu": "https://creativecommons.org/licenses/by-sa/3.0",
   "p": "https://commons.wikimedia.org/wiki/File:Roasted_corn_NP.jpg"
  },
+ "f_dalat_pizza": {
+  "a": "Blueconcorde",
+  "l": "CC0",
+  "lu": "http://creativecommons.org/publicdomain/zero/1.0/deed.en",
+  "p": "https://commons.wikimedia.org/wiki/File:Banh_trang_nuong_dalat.jpg"
+ },
  "f_durian": {
   "a": "Rod Waddington",
   "l": "CC BY-SA 2.0",
@@ -144,6 +156,12 @@ export const CREDITS = {
   "l": "CC BY-SA 2.0",
   "lu": "https://creativecommons.org/licenses/by-sa/2.0",
   "p": "https://commons.wikimedia.org/wiki/File:I_scream_You_scream.jpg"
+ },
+ "f_mango": {
+  "a": "Salil Kumar Mukherjee",
+  "l": "CC BY-SA 4.0",
+  "lu": "https://creativecommons.org/licenses/by-sa/4.0",
+  "p": "https://commons.wikimedia.org/wiki/File:%27Dasheri%27_mango_(sliced).jpg"
  },
  "f_noodles": {
   "a": "Quercus acuta",
@@ -163,6 +181,12 @@ export const CREDITS = {
   "lu": "https://creativecommons.org/licenses/by-sa/4.0",
   "p": "https://commons.wikimedia.org/wiki/File:%D0%9F%D0%B8%D1%80%D0%BE%D0%B6%D0%BA%D0%B8_03.jpg"
  },
+ "f_seafood": {
+  "a": "PattayaPatrol",
+  "l": "CC BY-SA 4.0",
+  "lu": "https://creativecommons.org/licenses/by-sa/4.0",
+  "p": "https://commons.wikimedia.org/wiki/File:DSCF1106_Grilled_whole_squid_skewers_sizzling_on_a_market_stall_with_golden_fried_snacks_in_the_background.jpg"
+ },
  "f_shawarma": {
   "a": "Andy Li",
   "l": "CC0",
@@ -180,6 +204,114 @@ export const CREDITS = {
   "l": "CC0",
   "lu": "http://creativecommons.org/publicdomain/zero/1.0/deed.en",
   "p": "https://commons.wikimedia.org/wiki/File:Ch%E1%BA%A3_gi%C3%B2.jpg"
+ },
+ "j_airport": {
+  "a": "Asurnipal",
+  "l": "CC BY-SA 4.0",
+  "lu": "https://creativecommons.org/licenses/by-sa/4.0",
+  "p": "https://commons.wikimedia.org/wiki/File:Madeira-Funchal_airport-Baggage_carousel-01ASD.jpg"
+ },
+ "j_amusement": {
+  "a": "Syced",
+  "l": "CC0",
+  "lu": "http://creativecommons.org/publicdomain/zero/1.0/deed.en",
+  "p": "https://commons.wikimedia.org/wiki/File:July_2023_Suoi_Tien_Park_25.jpg"
+ },
+ "j_cafe": {
+  "a": "Phương Huy (thảo luận)",
+  "l": "Public domain",
+  "lu": "",
+  "p": "https://commons.wikimedia.org/wiki/File:Cafe_L%E1%BB%91i_X%C6%B0a,_%C4%91%C6%B0%E1%BB%9Dng_G%C3%B2_D%E1%BA%A7u,_T%C3%A2n_Ph%C3%BA,_th%C3%A1ng_9_n%C4%83m_2018_(12).jpg"
+ },
+ "j_cinema": {
+  "a": "BOKONGNAUTI Leapwo",
+  "l": "CC BY-SA 4.0",
+  "lu": "https://creativecommons.org/licenses/by-sa/4.0",
+  "p": "https://commons.wikimedia.org/wiki/File:HK_TKO_%E5%B0%87%E8%BB%8D%E6%BE%B3_Tseung_Kwan_O_PopCorn_mall_Star_Cinemas_main_lobby_March_2022_Px3_02.jpg"
+ },
+ "j_coffeeshop": {
+  "a": "Hirho",
+  "l": "CC BY 4.0",
+  "lu": "https://creativecommons.org/licenses/by/4.0",
+  "p": "https://commons.wikimedia.org/wiki/File:Boathouse_%C5%8Chori_Park_The_coffee_shop_%C5%8Chorik%C5%8Den_Ch%C5%AB%C5%8D-ku_Fukuoka_20260605_180144.jpg"
+ },
+ "j_dining_car": {
+  "a": "Ben Schumin",
+  "l": "CC BY-SA 3.0",
+  "lu": "https://creativecommons.org/licenses/by-sa/3.0",
+  "p": "https://commons.wikimedia.org/wiki/File:Amtrak_superliner_dining_car_(Auto_Train).jpg"
+ },
+ "j_fastfood": {
+  "a": "thalling55",
+  "l": "CC BY 2.0",
+  "lu": "https://creativecommons.org/licenses/by/2.0",
+  "p": "https://commons.wikimedia.org/wiki/File:The_only_American_fast_food_chain_that_I_saw_anywhere_in_Vietnam._(1348234572).jpg"
+ },
+ "j_foodcourt": {
+  "a": "Stephan van Helden",
+  "l": "CC BY-SA 4.0",
+  "lu": "https://creativecommons.org/licenses/by-sa/4.0",
+  "p": "https://commons.wikimedia.org/wiki/File:Food_court_in_the_Mall_of_Tripla.jpg"
+ },
+ "j_guesthouse": {
+  "a": "McKay Savage from London, UK",
+  "l": "CC BY 2.0",
+  "lu": "https://creativecommons.org/licenses/by/2.0",
+  "p": "https://commons.wikimedia.org/wiki/File:Vietnam_08_-_091_-_my_homestay_(3184886982).jpg"
+ },
+ "j_hostel": {
+  "a": "Sgroey",
+  "l": "CC BY 4.0",
+  "lu": "https://creativecommons.org/licenses/by/4.0",
+  "p": "https://commons.wikimedia.org/wiki/File:Hostel_6-bed_dorm_room,_Kuching,_Malaysia.jpg"
+ },
+ "j_hotel": {
+  "a": "Jumpy542",
+  "l": "CC0",
+  "lu": "http://creativecommons.org/publicdomain/zero/1.0/deed.en",
+  "p": "https://commons.wikimedia.org/wiki/File:My_Hotel_room_at_Grand_Hotel_Mackinac_Island.jpg"
+ },
+ "j_mall": {
+  "a": "Amenoc",
+  "l": "CC0",
+  "lu": "http://creativecommons.org/publicdomain/zero/1.0/deed.en",
+  "p": "https://commons.wikimedia.org/wiki/File:Vincom_Mega_Mall_Times_City.jpg"
+ },
+ "j_reception": {
+  "a": "Mattsjc",
+  "l": "CC BY 4.0",
+  "lu": "https://creativecommons.org/licenses/by/4.0",
+  "p": "https://commons.wikimedia.org/wiki/File:Reception_desk_at_Balch_Hotel_in_Dufur,_Oregon.jpg"
+ },
+ "j_resort": {
+  "a": "missbossy",
+  "l": "CC BY 2.0",
+  "lu": "https://creativecommons.org/licenses/by/2.0",
+  "p": "https://commons.wikimedia.org/wiki/File:Furama_Resort_Da_Nang_pool.jpg"
+ },
+ "j_rest_stop": {
+  "a": "Mcmorrl",
+  "l": "CC BY 4.0",
+  "lu": "https://creativecommons.org/licenses/by/4.0",
+  "p": "https://commons.wikimedia.org/wiki/File:Night_Buses_at_Rest_Stop_-_Vietnam.jpg"
+ },
+ "j_restaurant": {
+  "a": "Jaggery",
+  "l": "CC BY-SA 2.0",
+  "lu": "https://creativecommons.org/licenses/by-sa/2.0",
+  "p": "https://commons.wikimedia.org/wiki/File:Vietnam_Restaurant_in_Uplands_Swansea_-_geograph.org.uk_-_3953014.jpg"
+ },
+ "j_shopping_center": {
+  "a": "Ermell",
+  "l": "CC BY-SA 4.0",
+  "lu": "https://creativecommons.org/licenses/by-sa/4.0",
+  "p": "https://commons.wikimedia.org/wiki/File:Bamberg_Atrium_Rolltreppen-20180417-RM-171311.jpg"
+ },
+ "j_supermarket": {
+  "a": "trungydang",
+  "l": "CC BY 3.0",
+  "lu": "https://creativecommons.org/licenses/by/3.0",
+  "p": "https://commons.wikimedia.org/wiki/File:Sieu_thi_Co_opmart,_Cong_Quynh,_Pham_ngu_lao,_hcmvn_-_panoramio.jpg"
  },
  "s_ba_na": {
   "a": "Vivu Vietnam",
@@ -283,6 +415,12 @@ export const CREDITS = {
   "lu": "https://creativecommons.org/licenses/by-sa/4.0",
   "p": "https://commons.wikimedia.org/wiki/File:Linh_Ung_Pagoda_6.jpg"
  },
+ "s_lam_vien": {
+  "a": "Damian Vo",
+  "l": "CC BY-SA 2.0",
+  "lu": "https://creativecommons.org/licenses/by-sa/2.0",
+  "p": "https://commons.wikimedia.org/wiki/File:L%C3%A2m_Vi%C3%AAn_square_(August_7,_2018)_(42208026670).jpg"
+ },
  "s_langbiang": {
   "a": "The Erica Chang",
   "l": "CC BY 3.0",
@@ -306,6 +444,12 @@ export const CREDITS = {
   "l": "CC BY 4.0",
   "lu": "https://creativecommons.org/licenses/by/4.0",
   "p": "https://commons.wikimedia.org/wiki/File:Marble_Mountain_Hoi_An,_Da_Nang_(71468).jpg"
+ },
+ "s_mud": {
+  "a": "Prayitno / Thank you for (12 millions +) view from Los Angeles, USA",
+  "l": "CC BY 2.0",
+  "lu": "https://creativecommons.org/licenses/by/2.0",
+  "p": "https://commons.wikimedia.org/wiki/File:Mud_Bath_(24120323915).jpg"
  },
  "s_mui_ne": {
   "a": "Vyacheslav Argenberg",
@@ -379,6 +523,18 @@ export const CREDITS = {
   "lu": "https://creativecommons.org/licenses/by-sa/4.0",
   "p": "https://commons.wikimedia.org/wiki/File:Graffiti_on_toilet_building_in_Pedregalejo_Beach_04.jpg"
  },
+ "t_bidet": {
+  "a": "Karyev",
+  "l": "CC BY-SA 4.0",
+  "lu": "https://creativecommons.org/licenses/by-sa/4.0",
+  "p": "https://commons.wikimedia.org/wiki/File:Bidet_shower_greek_style.jpg"
+ },
+ "t_boat": {
+  "a": "SuSanA Secretariat",
+  "l": "CC BY 2.0",
+  "lu": "https://creativecommons.org/licenses/by/2.0",
+  "p": "https://commons.wikimedia.org/wiki/File:Inspection_of_new_toilet_via_boat_(7414532588).jpg"
+ },
  "t_bus": {
   "a": "LMP 2001",
   "l": "CC BY-SA 4.0",
@@ -391,11 +547,41 @@ export const CREDITS = {
   "lu": "https://creativecommons.org/licenses/by/2.0",
   "p": "https://commons.wikimedia.org/wiki/File:The_rains_on_the_previous_night_had_made_the_jungle_paths_wet_and_slushy_(49695780048).jpg"
  },
+ "t_camping": {
+  "a": "Gustav Lindqvist",
+  "l": "CC BY-SA 4.0",
+  "lu": "https://creativecommons.org/licenses/by-sa/4.0",
+  "p": "https://commons.wikimedia.org/wiki/File:Campsite_with_toilet_by_Kleinafallet.jpg"
+ },
+ "t_cleaning": {
+  "a": "Hingshaichvdco",
+  "l": "CC BY-SA 4.0",
+  "lu": "https://creativecommons.org/licenses/by-sa/4.0",
+  "p": "https://commons.wikimedia.org/wiki/File:HK_%E7%9F%B3%E5%A1%98%E5%92%80%E5%B8%82%E6%94%BF%E5%A4%A7%E5%BB%88_Shek_Tong_Tsui_Public_Library_Study_Room_toilet_out_of_service_sign_May_2018_IX2.jpg"
+ },
+ "t_coffee": {
+  "a": "charlotte henard",
+  "l": "CC BY-SA 2.0",
+  "lu": "https://creativecommons.org/licenses/by-sa/2.0",
+  "p": "https://commons.wikimedia.org/wiki/File:Deichman_Bj%C3%B8rvika,_Oslo_-_53131859984.jpg"
+ },
+ "t_fastfood": {
+  "a": "Huwaigaom 1000",
+  "l": "CC BY-SA 4.0",
+  "lu": "https://creativecommons.org/licenses/by-sa/4.0",
+  "p": "https://commons.wikimedia.org/wiki/File:HK_%E8%A5%BF%E7%81%A3%E6%B2%B3_Sai_Wan_Ho_night_%E8%88%88%E6%9D%B1%E9%82%A8_Hing_Tung_Estate_Shopping_Centre_shop_Fairwood_Fast_Food_Restaurant_n_Exit_toilet_door_July_2019_SSG_01.jpg"
+ },
  "t_gas": {
   "a": "Roy Egloff",
   "l": "CC BY-SA 4.0",
   "lu": "https://creativecommons.org/licenses/by-sa/4.0",
   "p": "https://commons.wikimedia.org/wiki/File:MA.SS._2018-08-15_filling-station_1415_3x2-R_5K.jpg"
+ },
+ "t_hotel_lobby": {
+  "a": "Chris Light",
+  "l": "CC BY-SA 4.0",
+  "lu": "https://creativecommons.org/licenses/by-sa/4.0",
+  "p": "https://commons.wikimedia.org/wiki/File:Ta-Ni-ki_Do-Dam_Nic-Con_2015-02-8_063.jpg"
  },
  "t_japan": {
   "a": "Volgar from Stockholm, Sweden",
@@ -409,11 +595,23 @@ export const CREDITS = {
   "lu": "",
   "p": "https://commons.wikimedia.org/wiki/File:Yudun_market_old_toilet.jpg"
  },
+ "t_mountain": {
+  "a": "Σ64",
+  "l": "CC BY-SA 3.0",
+  "lu": "http://creativecommons.org/licenses/by-sa/3.0/",
+  "p": "https://commons.wikimedia.org/wiki/File:Miyamasanso02.JPG"
+ },
  "t_museum": {
   "a": "Kaartic",
   "l": "CC BY-SA 4.0",
   "lu": "https://creativecommons.org/licenses/by-sa/4.0",
   "p": "https://commons.wikimedia.org/wiki/File:Restroom_at_221B_Baker_Street.jpg"
+ },
+ "t_nopaper": {
+  "a": "Santeri Viinamäki",
+  "l": "CC BY-SA 4.0",
+  "lu": "https://creativecommons.org/licenses/by-sa/4.0",
+  "p": "https://commons.wikimedia.org/wiki/File:No_toilet_paper.jpg"
  },
  "t_outhouse": {
   "a": "Carol M. Highsmith",
@@ -451,17 +649,35 @@ export const CREDITS = {
   "lu": "https://creativecommons.org/licenses/by-sa/4.0",
   "p": "https://commons.wikimedia.org/wiki/File:Public_toilets_in_the_suburbs_of_Hanoi_in_2014.jpg"
  },
+ "t_queue": {
+  "a": "玄史生",
+  "l": "CC0",
+  "lu": "http://creativecommons.org/publicdomain/zero/1.0/deed.en",
+  "p": "https://commons.wikimedia.org/wiki/File:Queues_of_Male_Toilets_after_Morning_Programs_of_2015_Hsinchu_AFB_Open_Day_20151121.jpg"
+ },
  "t_squat": {
   "a": "BiiJii",
   "l": "CC0",
   "lu": "http://creativecommons.org/publicdomain/zero/1.0/deed.en",
   "p": "https://commons.wikimedia.org/wiki/File:Squat_toilet_ILO_Geneva.jpg"
  },
+ "t_staff": {
+  "a": "Jeff chenqinyi",
+  "l": "CC BY-SA 3.0",
+  "lu": "https://creativecommons.org/licenses/by-sa/3.0",
+  "p": "https://commons.wikimedia.org/wiki/File:Bathroom_staff.JPG"
+ },
  "t_station": {
   "a": "N509FZ",
   "l": "CC BY-SA 4.0",
   "lu": "https://creativecommons.org/licenses/by-sa/4.0",
   "p": "https://commons.wikimedia.org/wiki/File:Toilet_11_at_Beijing_South_Railway_Station_arrivals_(20200909165903).jpg"
+ },
+ "t_temple": {
+  "a": "User:Løken",
+  "l": "CC BY-SA 3.0",
+  "lu": "https://creativecommons.org/licenses/by-sa/3.0",
+  "p": "https://commons.wikimedia.org/wiki/File:Buddhist_temple_in_Kyoto_(5).JPG"
  },
  "t_train": {
   "a": "Utente:Jollyroger (Federico Cantoni)",

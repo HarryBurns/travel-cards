@@ -14,6 +14,9 @@
  "d_coconut": {
   "file": "File:Coconut Drink, Pangandaran.JPG"
  },
+ "d_coconut_coffee": {
+  "file": "File:Vietnamese Salted Coffee & Xin chao's coconut Coffee - Xin Chao, Eastbourne 2026-08-14.jpg"
+ },
  "d_egg_coffee": {
   "file": "File:Egg Coffee (6923068614).jpg"
  },
@@ -65,11 +68,17 @@
  "f_corn": {
   "file": "File:Roasted corn NP.jpg"
  },
+ "f_dalat_pizza": {
+  "file": "File:Banh trang nuong dalat.jpg"
+ },
  "f_durian": {
   "file": "File:Durian Fruit in Yunnan.jpg"
  },
  "f_ice_cream": {
   "file": "File:I scream You scream.jpg"
+ },
+ "f_mango": {
+  "file": "File:'Dasheri' mango (sliced).jpg"
  },
  "f_noodles": {
   "file": "File:Nissin Cup Noodle (Original) - 01.jpg"
@@ -80,6 +89,9 @@
  "f_pirozhok": {
   "file": "File:Пирожки 03.jpg"
  },
+ "f_seafood": {
+  "file": "File:DSCF1106 Grilled whole squid skewers sizzling on a market stall with golden fried snacks in the background.jpg"
+ },
  "f_shawarma": {
   "file": "File:Handmade Chicken Shawarma Wrap - Lavash.jpg"
  },
@@ -88,6 +100,60 @@
  },
  "f_spring_rolls": {
   "file": "File:Chả giò.jpg"
+ },
+ "j_airport": {
+  "file": "File:Madeira-Funchal airport-Baggage carousel-01ASD.jpg"
+ },
+ "j_amusement": {
+  "file": "File:July 2023 Suoi Tien Park 25.jpg"
+ },
+ "j_cafe": {
+  "file": "File:Cafe Lối Xưa, đường Gò Dầu, Tân Phú, tháng 9 năm 2018 (12).jpg"
+ },
+ "j_cinema": {
+  "file": "File:HK TKO 將軍澳 Tseung Kwan O PopCorn mall Star Cinemas main lobby March 2022 Px3 02.jpg"
+ },
+ "j_coffeeshop": {
+  "file": "File:Boathouse Ōhori Park The coffee shop Ōhorikōen Chūō-ku Fukuoka 20260605 180144.jpg"
+ },
+ "j_dining_car": {
+  "file": "File:Amtrak superliner dining car (Auto Train).jpg"
+ },
+ "j_fastfood": {
+  "file": "File:The only American fast food chain that I saw anywhere in Vietnam. (1348234572).jpg"
+ },
+ "j_foodcourt": {
+  "file": "File:Food court in the Mall of Tripla.jpg"
+ },
+ "j_guesthouse": {
+  "file": "File:Vietnam 08 - 091 - my homestay (3184886982).jpg"
+ },
+ "j_hostel": {
+  "file": "File:Hostel 6-bed dorm room, Kuching, Malaysia.jpg"
+ },
+ "j_hotel": {
+  "file": "File:My Hotel room at Grand Hotel Mackinac Island.jpg"
+ },
+ "j_mall": {
+  "file": "File:Vincom Mega Mall Times City.jpg"
+ },
+ "j_reception": {
+  "file": "File:Reception desk at Balch Hotel in Dufur, Oregon.jpg"
+ },
+ "j_resort": {
+  "file": "File:Furama Resort Da Nang pool.jpg"
+ },
+ "j_rest_stop": {
+  "file": "File:Night Buses at Rest Stop - Vietnam.jpg"
+ },
+ "j_restaurant": {
+  "file": "File:Vietnam Restaurant in Uplands Swansea - geograph.org.uk - 3953014.jpg"
+ },
+ "j_shopping_center": {
+  "file": "File:Bamberg Atrium Rolltreppen-20180417-RM-171311.jpg"
+ },
+ "j_supermarket": {
+  "file": "File:Sieu thi Co opmart, Cong Quynh, Pham ngu lao, hcmvn - panoramio.jpg"
  },
  "s_ba_na": {
   "file": "File:Cable Car at Sun World Ba Na Hills in the sunset.jpg"
@@ -140,6 +206,9 @@
  "s_lady_buddha": {
   "file": "File:Linh Ung Pagoda 6.jpg"
  },
+ "s_lam_vien": {
+  "file": "File:Lâm Viên square (August 7, 2018) (42208026670).jpg"
+ },
  "s_langbiang": {
   "file": "File:Lang Biang mountain and tourist Jeeps in Da Lat Vietnam - panoramio.jpg"
  },
@@ -151,6 +220,9 @@
  },
  "s_marble_mountains": {
   "file": "File:Marble Mountain Hoi An, Da Nang (71468).jpg"
+ },
+ "s_mud": {
+  "file": "File:Mud Bath (24120323915).jpg"
  },
  "s_mui_ne": {
   "file": "File:Vietnam, Mui Ne sand dunes.jpg"
@@ -188,14 +260,35 @@
  "t_beach": {
   "file": "File:Graffiti on toilet building in Pedregalejo Beach 04.jpg"
  },
+ "t_bidet": {
+  "file": "File:Bidet shower greek style.jpg"
+ },
+ "t_boat": {
+  "file": "File:Inspection of new toilet via boat (7414532588).jpg"
+ },
  "t_bus": {
   "file": "File:Victory Liner 575 (THACO Bluesky Volvo B8R; interior daytime) 2026-01-04.jpg"
  },
  "t_bushes": {
   "file": "File:The rains on the previous night had made the jungle paths wet and slushy (49695780048).jpg"
  },
+ "t_camping": {
+  "file": "File:Campsite with toilet by Kleinafallet.jpg"
+ },
+ "t_cleaning": {
+  "file": "File:HK 石塘咀市政大廈 Shek Tong Tsui Public Library Study Room toilet out of service sign May 2018 IX2.jpg"
+ },
+ "t_coffee": {
+  "file": "File:Deichman Bjørvika, Oslo - 53131859984.jpg"
+ },
+ "t_fastfood": {
+  "file": "File:HK 西灣河 Sai Wan Ho night 興東邨 Hing Tung Estate Shopping Centre shop Fairwood Fast Food Restaurant n Exit toilet door July 2019 SSG 01.jpg"
+ },
  "t_gas": {
   "file": "File:MA.SS. 2018-08-15 filling-station 1415 3x2-R 5K.jpg"
+ },
+ "t_hotel_lobby": {
+  "file": "File:Ta-Ni-ki Do-Dam Nic-Con 2015-02-8 063.jpg"
  },
  "t_japan": {
   "file": "File:Controls of a typical toilet in Japan. (35400585742).jpg"
@@ -203,8 +296,14 @@
  "t_market": {
   "file": "File:Yudun market old toilet.jpg"
  },
+ "t_mountain": {
+  "file": "File:Miyamasanso02.JPG"
+ },
  "t_museum": {
   "file": "File:Restroom at 221B Baker Street.jpg"
+ },
+ "t_nopaper": {
+  "file": "File:No toilet paper.jpg"
  },
  "t_outhouse": {
   "file": "File:Outhouse at LSU Rural Life Museum.jpg"
@@ -224,11 +323,20 @@
  "t_public": {
   "file": "File:Public toilets in the suburbs of Hanoi in 2014.jpg"
  },
+ "t_queue": {
+  "file": "File:Queues of Male Toilets after Morning Programs of 2015 Hsinchu AFB Open Day 20151121.jpg"
+ },
  "t_squat": {
   "file": "File:Squat toilet ILO Geneva.jpg"
  },
+ "t_staff": {
+  "file": "File:Bathroom staff.JPG"
+ },
  "t_station": {
   "file": "File:Toilet 11 at Beijing South Railway Station arrivals (20200909165903).jpg"
+ },
+ "t_temple": {
+  "file": "File:Buddhist temple in Kyoto (5).JPG"
  },
  "t_train": {
   "file": "File:Train toilet R.jpg"

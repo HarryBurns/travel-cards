@@ -34,7 +34,7 @@ function describe(ev, names) {
         case 'reverse': return `${head} — разворот!`;
         case 'draw2': return `${head} — ${N(ev.victim)} берёт ${cardsWord(ev.cnt ?? 2)} и пропускает ход`;
         case 'again': return `${head} — и ходит ещё раз`;
-        case 'swap': return `${head} — меняется картами с ${N(ev.victim)}`;
+        case 'swap': return `${head} — обмен картами с игроком ${N(ev.victim)}`;
         default: return head;
       }
     }
