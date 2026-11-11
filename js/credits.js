@@ -536,10 +536,10 @@ export const CREDITS = {
   "p": "https://commons.wikimedia.org/wiki/File:H%E1%BA%A3i_d%C6%B0%C6%A1ng_h%E1%BB%8Dc_Nha_Trang.jpg"
  },
  "s_orchid_island": {
-  "a": "Daderot",
-  "l": "CC0",
-  "lu": "http://creativecommons.org/publicdomain/zero/1.0/deed.en",
-  "p": "https://commons.wikimedia.org/wiki/File:Orchid_House_-_Saigon_Zoo_and_Botanical_Gardens_-_Ho_Chi_Minh_City,_Vietnam_-_DSC01269.JPG"
+  "a": "Bohemian Baltimore",
+  "l": "CC BY-SA 4.0",
+  "lu": "https://creativecommons.org/licenses/by-sa/4.0",
+  "p": "https://commons.wikimedia.org/wiki/File:Unknown_Phalaenopsis_hybrid_in_the_United_States_Botanic_Garden,_Washington,_D.C..jpg"
  },
  "s_po_nagar": {
   "a": "Tervlugt",
@@ -770,10 +770,10 @@ export const CREDITS = {
   "p": "https://commons.wikimedia.org/wiki/File:Queues_of_Male_Toilets_after_Morning_Programs_of_2015_Hsinchu_AFB_Open_Day_20151121.jpg"
  },
  "t_restaurant": {
-  "a": "Sarojini Seupersad",
-  "l": "CC BY-SA 4.0",
-  "lu": "https://creativecommons.org/licenses/by-sa/4.0",
-  "p": "https://commons.wikimedia.org/wiki/File:Fancy_Restroom.JPG"
+  "a": "JimmysWG",
+  "l": "CC BY-SA 3.0",
+  "lu": "https://creativecommons.org/licenses/by-sa/3.0",
+  "p": "https://commons.wikimedia.org/wiki/File:129lr_JWGB.jpg"
  },
  "t_room": {
   "a": "Basile Morin",
