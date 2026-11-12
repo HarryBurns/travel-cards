@@ -16,6 +16,7 @@ const cleanName = (v) => v.replace(/\s+/g, ' ').trim().slice(0, 16);
 function App() {
   const [name, setNameState] = useState(() => cleanName(load('tc_name')));
   const [roomId, setRoomState] = useState(() => load('tc_room') || null);
+  const [watching, setWatchState] = useState(() => !!load('tc_room') && load('tc_watch') === '1');
   const [connected, setConnected] = useState(false);
   const [everConnected, setEverConnected] = useState(false);
   const [people, setPeople] = useState({});
@@ -25,9 +26,14 @@ function App() {
   const [toasts, setToasts] = useState([]);
   const [dialog, setDialog] = useState(null);
   const joining = useRef(false);
+  const roomRef = useRef(roomId);
+  roomRef.current = roomId;
 
   const setName = (v) => { save('tc_name', v); setNameState(v); };
-  const setRoomId = (v) => { save('tc_room', v); setRoom(undefined); setGame(null); setRoomState(v); };
+  const setWatching = (v) => { save('tc_watch', v ? '1' : ''); setWatchState(!!v); };
+  const setRoomId = (v, watch = false) => {
+    save('tc_room', v); setWatching(v && watch); setRoom(undefined); setGame(null); setRoomState(v);
+  };
 
   const toast = useCallback((text) => {
     const id = Math.random();
@@ -63,8 +69,13 @@ function App() {
   // Присутствие: обновляем при каждом подключении и смене экрана
   useEffect(() => {
     if (!connected || !name) return;
-    net.arm({ name, roomId: room ? roomId : null, status, inRoom });
-  }, [connected, name, roomId, status, inRoom, !!room]);
+    net.arm({ name, roomId: room ? roomId : null, status, inRoom, watching });
+  }, [connected, name, roomId, status, inRoom, !!room, watching]);
+
+  // Зритель, попавший в комнату, становится обычным игроком
+  useEffect(() => {
+    if (watching && inRoom && status === 'waiting') setWatching(false);
+  }, [watching, inRoom, status]);
 
   // Комната исчезла / нас в ней нет
   useEffect(() => {
@@ -75,24 +86,32 @@ function App() {
     }
     if (status === 'waiting' && !inRoom && !joining.current) {
       // Отвалились из ожидающей комнаты или началась «ещё партия» — возвращаемся в неё
+      // Зрители заходят чуть позже, чтобы места сначала достались тем, кто играл
       joining.current = true;
-      net.joinRoom(roomId, name)
-        .then((ok) => { if (!ok) { setRoomId(null); toast('В этой игре больше нет места'); } })
-        .catch(() => setRoomId(null))
-        .finally(() => { joining.current = false; });
+      const id = roomId;
+      setTimeout(() => {
+        if (roomRef.current !== id) { joining.current = false; return; }
+        net.joinRoom(id, name)
+          .then((ok) => { if (!ok && roomRef.current === id) { setRoomId(null); toast('В этой игре больше нет места'); } })
+          .catch(() => { if (roomRef.current === id) setRoomId(null); })
+          .finally(() => { joining.current = false; });
+      }, watching ? 1500 : 0);
     }
   }, [roomId, room, status, inRoom, name]);
 
   // Игра идёт, но мы в ней не участвуем
   useEffect(() => {
-    if (!roomId || !inGame || !live) return;
+    if (!roomId || !inGame || !live || watching) return;
     const s = live.state;
-    const mine = s.names[net.uid];
-    if (!mine || (s.status === 'playing' && !s.order.includes(net.uid))) {
+    if (!s.names[net.uid]) {
+      // Не успели в раздачу — остаёмся зрителем и попадём в следующую партию
+      setWatching(true);
+      net.dropSeat(roomId);
+      toast('Игра началась без тебя — пока можно посмотреть');
+    } else if (s.status === 'playing' && !s.order.includes(net.uid)) {
       setRoomId(null);
-      if (!mine) toast('Игра началась без тебя');
     }
-  }, [roomId, inGame, live]);
+  }, [roomId, inGame, live, watching]);
 
   // Уборка заброшенных комнат
   useEffect(() => {
@@ -122,8 +141,11 @@ function App() {
 
   async function leave() {
     const id = roomId;
+    const wasWatching = watching;
     setRoomId(null);
-    if (id) await net.leaveRoom(id).catch(() => {});
+    if (!id) return;
+    if (wasWatching) await net.unwatch(id);
+    else await net.leaveRoom(id).catch(() => {});
   }
 
   function rename() {
@@ -138,7 +160,7 @@ function App() {
     screen = html`<${Splash} text="Подключаемся…" />`;
   } else if (!roomId) {
     screen = html`<${Lobby} name=${name} people=${people} rooms=${rooms} connected=${connected}
-      onCreate=${create} onJoin=${join} onRename=${rename} onDialog=${setDialog} />`;
+      onCreate=${create} onJoin=${join} onWatch=${(id) => setRoomId(id, true)} onRename=${rename} onDialog=${setDialog} />`;
   } else if (!room || (status === 'waiting' && !inRoom)) {
     screen = html`<${Splash} text="Заходим…" />`;
   } else if (status === 'waiting') {
@@ -146,7 +168,7 @@ function App() {
   } else if (!live) {
     screen = html`<${Splash} text="Раздаём карты…" />`;
   } else {
-    screen = html`<${GameScreen} key=${roomId + ':' + room.round} roomId=${roomId} room=${room} game=${live} connected=${connected}
+    screen = html`<${GameScreen} key=${roomId + ':' + room.round} roomId=${roomId} room=${room} game=${live} connected=${connected} spectator=${watching}
       onExit=${leave} toast=${toast} />`;
   }
 
@@ -203,7 +225,7 @@ function NameScreen({ onDone, onDialog }) {
     </div>`;
 }
 
-function Lobby({ name, people, rooms, connected, onCreate, onJoin, onRename, onDialog }) {
+function Lobby({ name, people, rooms, connected, onCreate, onJoin, onWatch, onRename, onDialog }) {
   const list = Object.entries(rooms || {})
     .map(([id, r]) => ({ id, ...r, players: r.players || {} }))
     .filter((r) => r.status === 'playing' || (r.status === 'waiting' && Object.keys(r.players).length))
@@ -251,7 +273,8 @@ function Lobby({ name, people, rooms, connected, onCreate, onJoin, onRename, onD
                       ? html`<span class="tag wait">ждёт игроков · ${ps.length}/${MAX_PLAYERS}</span>
                              <button class="btn" disabled=${full || !connected} onClick=${() => onJoin(r.id)}>
                                ${full ? 'Мест нет' : 'Войти'}</button>`
-                      : html`<span class="tag play">идёт игра</span>`}
+                      : html`<span class="tag play">идёт игра</span>
+                             <button class="btn" disabled=${!connected} onClick=${() => onWatch(r.id)}>👀 Смотреть</button>`}
                   </div>
                 </li>`;
             })}
@@ -264,7 +287,7 @@ function Lobby({ name, people, rooms, connected, onCreate, onJoin, onRename, onD
             ${online.map(([id, p]) => html`
               <li key=${id} class=${id === net.uid ? 'me' : ''}>
                 <span>${avatar(id)} ${p.name}${id === net.uid ? ' (ты)' : ''}</span>
-                <span class="muted">${p.room && roomName(p.room) ? `в «${roomName(p.room)}»` : 'в лобби'}</span>
+                <span class="muted">${p.room && roomName(p.room) ? `${p.watch ? 'смотрит' : 'в'} «${roomName(p.room)}»` : 'в лобби'}</span>
               </li>`)}
           </ul>
         </section>

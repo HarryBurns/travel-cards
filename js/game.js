@@ -1,14 +1,14 @@
 // Игровой стол
 import { html, useState, useEffect, useRef, useMemo, useLayoutEffect } from './vendor/preact.js';
 import * as net from './net.js';
-import { CARD_BY_ID, TYPES, PHRASES } from './cards.js';
+import { CARD_BY_ID, TYPES, PHRASES, EMOJIS } from './cards.js';
 import { NEXT, canPlay, topCard } from './rules.js';
 import { RECONNECT_GRACE_MS, AUTO_MOVE_DELAY_MS } from './config.js';
 import { remember } from './seen.js';
 import { Card, CardBack, Modal, Rules, avatar, cardsWord, cardsLeft } from './ui.js';
 
 const TYPE_ORDER = { sight: 0, food: 1, drink: 2, toilet: 3, joker: 4 };
-const BUBBLE_MS = 4500;
+const NOTICE_MS = 5000;
 
 function sortHand(hand) {
   return hand.slice().sort((a, b) => {
@@ -65,12 +65,40 @@ function fmtWait(ms) {
   return `${Math.floor(s / 60)}:${String(s % 60).padStart(2, '0')}`;
 }
 
-function Bubble({ reaction, now }) {
-  if (!reaction || now - reaction.at > BUBBLE_MS || now - reaction.at < -5000) return null;
-  return html`<div class="bubble">${PHRASES[reaction.i] || '…'}</div>`;
+// Свежие реплики игроков и зрителей
+function activeNotices(game, now) {
+  const s = game.state;
+  return Object.entries(game.reactions)
+    .map(([id, r]) => {
+      if (!r || now - r.at > NOTICE_MS || now - r.at < -5000) return null;
+      const emoji = r.e != null ? EMOJIS[r.e] : null;
+      const text = emoji || PHRASES[r.i];
+      const player = s.names[id];
+      const name = player || (game.watchers[id] && game.watchers[id].name);
+      if (!text || !name) return null;
+      return { id, key: `${id}:${r.n ?? r.at}`, at: r.at, name, text, emoji: !!emoji, watcher: !player };
+    })
+    .filter(Boolean)
+    .sort((a, b) => a.at - b.at);
 }
 
-function Seat({ id, s, presence, reaction, now }) {
+// Реплики показываем как push-уведомления на телефоне
+function Notices({ list }) {
+  if (!list.length) return null;
+  return html`
+    <div class="notices">
+      ${list.map((n) => html`
+        <div class="notice ${n.emoji ? 'emoji' : ''}" key=${n.key}>
+          <div class="notice-ava">${n.watcher ? '👀' : avatar(n.id)}</div>
+          <div class="notice-body">
+            <div class="notice-head"><b>${n.name}${n.id === net.uid ? ' (ты)' : ''}</b><span>${n.watcher ? 'зритель · ' : ''}сейчас</span></div>
+            <div class="notice-text">${n.text}</div>
+          </div>
+        </div>`)}
+    </div>`;
+}
+
+function Seat({ id, s, presence, talking, now }) {
   const p = presence[id];
   const offline = !p || !p.on;
   const turn = s.turn === id;
@@ -79,9 +107,9 @@ function Seat({ id, s, presence, reaction, now }) {
   const left = RECONNECT_GRACE_MS - (now - since);
   return html`
     <div class="seat ${turn ? 'turn' : ''} ${offline ? 'off' : ''}">
-      <${Bubble} reaction=${reaction} now=${now} />
       <div class="seat-ava">
         ${avatar(id)}
+        ${talking && html`<span class="seat-talk">💬</span>`}
         <span class="seat-count" title=${cardsLeft(count)}>${count}</span>
       </div>
       <div class="seat-name">${s.names[id]}</div>
@@ -118,7 +146,7 @@ function Hand({ cards, options, myTurn, selected, fresh, onPick }) {
     </div>`;
 }
 
-export function GameScreen({ roomId, room, game, connected, onExit, toast }) {
+export function GameScreen({ roomId, room, game, connected, spectator, onExit, toast }) {
   const uid = net.uid;
   const s = game.state;
   const [, setTick] = useState(0);
@@ -151,7 +179,7 @@ export function GameScreen({ roomId, room, game, connected, onExit, toast }) {
   // Соперники — в порядке хода, начиная со следующего за мной
   const seats = useMemo(() => {
     const i = s.order.indexOf(uid);
-    if (i < 0) return s.order;
+    if (i < 0) return s.order; // зритель видит всех
     return s.order.slice(i + 1).concat(s.order.slice(0, i));
   }, [s.order.join()]);
 
@@ -193,7 +221,7 @@ export function GameScreen({ roomId, room, game, connected, onExit, toast }) {
     const p = game.presence[s.turn];
     if (p && p.on) return;
     const since = (p && p.at) || s.t0 || s.at || now;
-    const myRank = Math.max(0, s.order.indexOf(uid));
+    const myRank = s.order.includes(uid) ? s.order.indexOf(uid) : s.order.length;
     if (now - since < RECONNECT_GRACE_MS) return;
     if (now - (s.at || 0) < AUTO_MOVE_DELAY_MS + myRank * 500) return;
     if (autoSeq.current === s.seq) return;
@@ -240,18 +268,22 @@ export function GameScreen({ roomId, room, game, connected, onExit, toast }) {
     else setSelected(selected === id ? null : id);
   }
 
-  function say(i) {
+  function say(what) {
     setPhrases(false);
     if (Date.now() - lastReact.current < 1200) return;
     lastReact.current = Date.now();
-    net.react(roomId, i).catch(() => {});
+    net.react(roomId, what).catch(() => {});
   }
 
   async function exit() {
     setConfirmExit(false);
-    if (playing) await net.leaveGame(roomId).catch(() => {});
+    if (playing && !spectator) await net.leaveGame(roomId).catch(() => {});
     onExit();
   }
+
+  const notices = activeNotices(game, now);
+  const talking = new Set(notices.map((n) => n.id));
+  const watchers = Object.values(game.watchers).map((w) => w.name).filter(Boolean);
 
   const need = topType === 'joker' ? null : NEXT[topType] || [];
   const turnName = s.names[s.turn];
@@ -266,15 +298,15 @@ export function GameScreen({ roomId, room, game, connected, onExit, toast }) {
   return html`
     <div class="game">
       <header class="g-top">
-        <button class="btn ghost sm" onClick=${() => (playing ? setConfirmExit(true) : exit())}>← Выйти</button>
-        <div class="g-title">${room.name}</div>
+        <button class="btn ghost sm" onClick=${() => (playing && !spectator ? setConfirmExit(true) : exit())}>← Выйти</button>
+        <div class="g-title">${room.name}${watchers.length > 0 && html`<span class="watchers" title=${'Смотрят: ' + watchers.join(', ')}>👀 ${watchers.length}</span>`}</div>
         <button class="btn ghost sm" onClick=${() => setRules(true)}>Правила</button>
       </header>
 
       <div class="seats">
         <div class="dir" title="Направление хода">${s.dir === 1 ? 'ход →' : '← ход'}</div>
         ${seats.map((id) => html`
-          <${Seat} key=${id} id=${id} s=${s} presence=${game.presence} reaction=${game.reactions[id]} now=${now} />`)}
+          <${Seat} key=${id} id=${id} s=${s} presence=${game.presence} talking=${talking.has(id)} now=${now} />`)}
       </div>
 
       <div class="table" onClick=${() => setSelected(null)}><div class="table-in">
@@ -303,21 +335,29 @@ export function GameScreen({ roomId, room, game, connected, onExit, toast }) {
       </div>
 
       <div class="me-row">
-        <div class="me">
-          <${Bubble} reaction=${game.reactions[uid]} now=${now} />
-          <span class="me-ava">${avatar(uid)}</span>
-          <span class="me-name">${s.names[uid]}</span>
-          <span class="me-count">${cardsLeft(hand.length)}</span>
-        </div>
+        ${spectator
+          ? html`<div class="me"><span class="me-ava">👀</span><span class="me-name">Ты смотришь игру</span></div>`
+          : html`<div class="me">
+              <span class="me-ava">${avatar(uid)}</span>
+              <span class="me-name">${s.names[uid]}</span>
+              <span class="me-count">${cardsLeft(hand.length)}</span>
+            </div>`}
         <button class="btn sm say" onClick=${() => setPhrases(!phrases)}>💬 Сказать</button>
       </div>
 
-      <${Hand} cards=${hand} options=${options} myTurn=${myTurn} selected=${sel} fresh=${fresh} onPick=${pick} />
+      ${spectator
+        ? html`<div class="hand spect">Когда партия закончится, ты попадёшь в следующую — если останешься на этом экране.</div>`
+        : html`<${Hand} cards=${hand} options=${options} myTurn=${myTurn} selected=${sel} fresh=${fresh} onPick=${pick} />`}
+
+      <${Notices} list=${notices} />
 
       ${phrases && html`
         <div class="overlay clear" onClick=${() => setPhrases(false)}>
           <div class="phrases" onClick=${(e) => e.stopPropagation()}>
-            ${PHRASES.map((p, i) => html`<button key=${i} onClick=${() => say(i)}>${p}</button>`)}
+            <div class="emojis">
+              ${EMOJIS.map((e, i) => html`<button key=${i} onClick=${() => say({ e: i })}>${e}</button>`)}
+            </div>
+            ${PHRASES.map((p, i) => html`<button key=${i} onClick=${() => say({ i })}>${p}</button>`)}
           </div>
         </div>`}
 
@@ -356,13 +396,13 @@ export function GameScreen({ roomId, room, game, connected, onExit, toast }) {
 
       ${rules && html`<${Rules} onClose=${() => setRules(false)} />`}
 
-      ${s.status === 'finished' && html`<${Result} s=${s} roomId=${roomId} onExit=${exit} toast=${toast} />`}
+      ${s.status === 'finished' && html`<${Result} s=${s} roomId=${roomId} spectator=${spectator} onExit=${exit} toast=${toast} />`}
 
       ${!connected && html`<div class="offline-bar">📡 Нет связи — переподключаемся…</div>`}
     </div>`;
 }
 
-function Result({ s, roomId, onExit, toast }) {
+function Result({ s, roomId, spectator, onExit, toast }) {
   const uid = net.uid;
   const iWon = s.winner === uid;
   const others = Object.keys(s.names)
@@ -395,7 +435,7 @@ function Result({ s, roomId, onExit, toast }) {
         </ul>
         <div class="row">
           <button class="btn" onClick=${onExit}>В лобби</button>
-          <button class="btn primary" disabled=${busy} onClick=${again}>Ещё партию</button>
+          <button class="btn primary" disabled=${busy} onClick=${again}>${spectator ? 'Играть следующую' : 'Ещё партию'}</button>
         </div>
       </div>
     </div>`;

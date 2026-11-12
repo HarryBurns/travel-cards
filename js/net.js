@@ -5,7 +5,8 @@
 //   rooms/{id}             {name, host, status, createdAt, updatedAt, players/{uid}: {name, joinedAt}}
 //   games/{id}/state       состояние партии (см. rules.js)
 //   games/{id}/presence/{uid}  {on, at}                – кто из игроков на связи
-//   games/{id}/reactions/{uid} {i, at}                 – последняя фраза игрока
+//   games/{id}/reactions/{uid} {i | e, n, at}          – последняя фраза (i) или смайлик (e) игрока
+//   games/{id}/watchers/{uid}  {name}                  – зрители
 import {
   initializeApp, getDatabase, ref, onValue, set, update, remove, push, runTransaction, onDisconnect, serverTimestamp,
 } from './vendor/firebase.js';
@@ -59,19 +60,28 @@ export const watchRoom = (id, cb) => onValue(at(`rooms/${id}`), (s) => cb(s.val(
 export function watchGame(id, cb) {
   return onValue(at(`games/${id}`), (s) => {
     const v = s.val() || {};
-    cb({ state: normalize(v.state), presence: v.presence || {}, reactions: v.reactions || {} });
+    cb({ state: normalize(v.state), presence: v.presence || {}, reactions: v.reactions || {}, watchers: v.watchers || {} });
   });
 }
 
 // ── присутствие ──
 // Вызывается при каждом (пере)подключении и смене экрана: обработчики onDisconnect одноразовые.
-export function arm({ name, roomId, status, inRoom }) {
+export function arm({ name, roomId, status, inRoom, watching }) {
   const me = at(`lobby/${uid}`);
   onDisconnect(me).remove();
-  set(me, { name, room: roomId || null });
+  set(me, { name, room: roomId || null, watch: (roomId && watching) || null });
   if (!roomId) return;
   const seat = at(`rooms/${roomId}/players/${uid}`);
   const presence = at(`games/${roomId}/presence/${uid}`);
+  const watcher = at(`games/${roomId}/watchers/${uid}`);
+  if (watching && status !== 'waiting') {
+    // Зритель: в партии не участвует, просто отмечается в списке смотрящих
+    onDisconnect(watcher).remove();
+    set(watcher, { name });
+    return;
+  }
+  onDisconnect(watcher).cancel();
+  remove(watcher);
   if (status === 'waiting') {
     // Из ещё не начатой игры отвалившийся игрок просто исчезает
     if (inRoom) onDisconnect(seat).remove();
@@ -208,8 +218,18 @@ export function markFinished(id) {
   return update(at(`rooms/${id}`), { status: 'finished', updatedAt: serverTimestamp() }).catch(() => {});
 }
 
-export function react(id, i) {
-  return set(at(`games/${id}/reactions/${uid}`), { i, at: serverTimestamp() });
+// what: {i: номер фразы} или {e: номер смайлика}
+export function react(id, what) {
+  return set(at(`games/${id}/reactions/${uid}`), { ...what, n: Math.floor(Math.random() * 1e9), at: serverTimestamp() });
+}
+
+export function dropSeat(id) {
+  return remove(at(`rooms/${id}/players/${uid}`)).catch(() => {});
+}
+
+export async function unwatch(id) {
+  await onDisconnect(at(`games/${id}/watchers/${uid}`)).cancel().catch(() => {});
+  await remove(at(`games/${id}/watchers/${uid}`)).catch(() => {});
 }
 
 // ── уборка: сервера нет, поэтому заброшенные комнаты убирают сами игроки из лобби ──
