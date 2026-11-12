@@ -4,7 +4,7 @@ import { CARDS, CARD_BY_ID } from './cards.js';
 
 export const MIN_PLAYERS = 2;
 export const MAX_PLAYERS = 6;
-export const HAND_SIZE = 4;
+export const HAND_SIZE = 6;
 const LOG_LIMIT = 30;
 
 // Что можно положить на карту данного типа
