@@ -148,6 +148,15 @@ function App() {
     else await net.leaveRoom(id).catch(() => {});
   }
 
+  // Новичку, который впервые представился, сразу показываем правила
+  function register(v) {
+    setName(v);
+    if (!load('tc_rules_seen')) {
+      save('tc_rules_seen', '1');
+      setDialog('welcome');
+    }
+  }
+
   function rename() {
     net.leaveLobby().catch(() => {});
     setName('');
@@ -155,7 +164,7 @@ function App() {
 
   let screen;
   if (!name) {
-    screen = html`<${NameScreen} onDone=${setName} onDialog=${setDialog} />`;
+    screen = html`<${NameScreen} onDone=${register} onDialog=${setDialog} />`;
   } else if (!everConnected) {
     screen = html`<${Splash} text="Подключаемся…" />`;
   } else if (!roomId) {
@@ -174,7 +183,7 @@ function App() {
 
   return html`
     ${screen}
-    ${dialog === 'rules' && html`<${Rules} onClose=${() => setDialog(null)} />`}
+    ${(dialog === 'rules' || dialog === 'welcome') && html`<${Rules} welcome=${dialog === 'welcome'} onClose=${() => setDialog(null)} />`}
     ${dialog === 'credits' && html`<${Credits} onClose=${() => setDialog(null)} />`}
     ${dialog === 'deck' && html`<${Deck} onClose=${() => setDialog(null)} />`}
     <div class="toasts">${toasts.map((t) => html`<div class="toast" key=${t.id}>${t.text}</div>`)}</div>`;

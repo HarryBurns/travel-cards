@@ -68,10 +68,10 @@ export function Modal({ title, onClose, children, class: cls = '' }) {
     </div>`;
 }
 
-export function Rules({ onClose }) {
+export function Rules({ onClose, welcome }) {
   const chip = (t) => html`<span class="chip t-${t}">${TYPES[t].icon} ${TYPES[t].label}</span>`;
   return html`
-    <${Modal} title="Правила" onClose=${onClose} class="rules">
+    <${Modal} title=${welcome ? 'Как играть' : 'Правила'} onClose=${onClose} class="rules">
       <p>Вы — неопытные туристы. Посмотрели достопримечательность — захотелось есть.
          Поели — захотелось пить. Попили — срочно ищем туалет. И по кругу.</p>
       <p><b>Цель:</b> первым избавиться от всех карт и улететь домой.</p>
@@ -92,6 +92,9 @@ export function Rules({ onClose }) {
       </ul>
       <p class="muted">Вдвоём «Разворот» работает как пропуск хода соперника.
          Если игрок отвалился, его ждут минуту, а потом ходят за него автоматически.</p>
+      ${welcome && html`
+        <p class="muted">Правила всегда можно открыть снова — кнопка «Правила» есть в лобби и за столом.</p>
+        <button class="btn primary big" onClick=${onClose}>Понятно, поехали!</button>`}
     <//>`;
 }
 
