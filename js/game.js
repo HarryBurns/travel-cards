@@ -82,19 +82,60 @@ function activeNotices(game, now) {
     .sort((a, b) => a.at - b.at);
 }
 
-// Реплики показываем как push-уведомления на телефоне
+// Реплики показываем как push-уведомления на телефоне: их можно убрать тыком или смахнуть
 function Notices({ list }) {
-  if (!list.length) return null;
+  const [closed, setClosed] = useState(() => new Set());
+  const shown = list.filter((n) => !closed.has(n.key));
+  if (!shown.length) return null;
+  const close = (key) => setClosed((old) => new Set([...old].slice(-30)).add(key));
   return html`
     <div class="notices">
-      ${list.map((n) => html`
-        <div class="notice ${n.emoji ? 'emoji' : ''}" key=${n.key}>
-          <div class="notice-ava">${n.watcher ? '👀' : avatar(n.id)}</div>
-          <div class="notice-body">
-            <div class="notice-head"><b>${n.name}${n.id === net.uid ? ' (ты)' : ''}</b><span>${n.watcher ? 'зритель · ' : ''}сейчас</span></div>
-            <div class="notice-text">${n.text}</div>
-          </div>
-        </div>`)}
+      ${shown.map((n) => html`<${Notice} key=${n.key} n=${n} onClose=${() => close(n.key)} />`)}
+    </div>`;
+}
+
+const SWIPE_OUT = { up: '0 -160%', left: '-120% 0', right: '120% 0' };
+
+function Notice({ n, onClose }) {
+  const [drag, setDrag] = useState(null);
+  const [out, setOut] = useState(null);
+  const start = useRef(null);
+
+  const down = (e) => {
+    start.current = { x: e.clientX, y: e.clientY };
+    try { e.currentTarget.setPointerCapture(e.pointerId); } catch { /* не страшно */ }
+  };
+  const move = (e) => {
+    if (!start.current) return;
+    setDrag({ x: e.clientX - start.current.x, y: Math.min(0, e.clientY - start.current.y) });
+  };
+  const up = (e) => {
+    if (!start.current) return;
+    const dx = e.clientX - start.current.x;
+    const dy = e.clientY - start.current.y;
+    start.current = null;
+    const tap = Math.abs(dx) < 8 && Math.abs(dy) < 8;
+    const side = Math.abs(dx) > 60;
+    if (tap || side || dy < -30) {
+      setOut(side ? (dx < 0 ? 'left' : 'right') : 'up');
+      setTimeout(onClose, 180);
+    } else {
+      setDrag(null);
+    }
+  };
+  const cancel = () => { start.current = null; setDrag(null); };
+
+  const style = out
+    ? `translate:${SWIPE_OUT[out]};transition:translate .18s ease-in`
+    : drag ? `translate:${drag.x}px ${drag.y}px` : 'transition:translate .15s';
+  return html`
+    <div class="notice ${n.emoji ? 'emoji' : ''}" style=${style} title="Нажми или смахни, чтобы убрать"
+         onPointerDown=${down} onPointerMove=${move} onPointerUp=${up} onPointerCancel=${cancel}>
+      <div class="notice-ava">${n.watcher ? '👀' : avatar(n.id)}</div>
+      <div class="notice-body">
+        <div class="notice-head"><b>${n.name}${n.id === net.uid ? ' (ты)' : ''}</b><span>${n.watcher ? 'зритель · ' : ''}сейчас</span></div>
+        <div class="notice-text">${n.text}</div>
+      </div>
     </div>`;
 }
 
